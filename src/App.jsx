@@ -1,11 +1,12 @@
-import './App.scss'
+import "./App.scss";
+import PhotoCardList from "./components/PhotoCardList/PhotoCardList";
 
 function App() {
   return (
     <>
-      
+      <PhotoCardList />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,11 +1,12 @@
-import "./PhotoCard.scss"
+import "./PhotoCard.scss";
 
-function PhotoCard() {
-    return (
-        <>
-            
-        </>
-    )
+function PhotoCard({ url, alt, photographer }) {
+  return (
+    <div className="photocard">
+      <img src={url} alt={alt} />
+      <h2 className="photocard__photographer">{photographer}</h2>;
+    </div>
+  );
 }
 
-export default PhotoCard
+export default PhotoCard;
