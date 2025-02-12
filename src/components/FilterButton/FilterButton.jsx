@@ -4,7 +4,7 @@ function FilterButton() {
     return (
         <>
             <button>Filter
-                <img src="../assets/images/Filter.svg" alt="filter icon"></img>
+                <img src="../src/assets/images/Filter.svg" alt="filter icon"></img>
             </button>
         </>
     )
