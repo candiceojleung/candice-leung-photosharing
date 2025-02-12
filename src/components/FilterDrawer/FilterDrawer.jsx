@@ -1,10 +1,10 @@
 import "./FilterDrawer.scss"
-import Tags from "../Tags/Tags"
+import FilterTags from "../FilterTags/FilterTags"
 
-function FilterDrawer() {
+function FilterDrawer({setSelectedFilter}) {
     return (
         <>
-            <Tags />
+            <FilterTags setSelectedFilter={setSelectedFilter}/>
         </>
     )
 }
