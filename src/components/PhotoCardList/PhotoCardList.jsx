@@ -4,13 +4,14 @@ import PhotoCard from "../PhotoCard/PhotoCard";
 
 function PhotoCardList() {
   return (
-    <section className="photocard__list">
+    <section className="photocard-list">
       {photos.map((photo) => {
         return (
           <PhotoCard
             url={photo.photo}
             alt={photo.photoDescription}
             photographer={photo.photographer}
+            tags={photo.tags}
             key={photo.id}
           />
         );

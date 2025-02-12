@@ -1,10 +1,15 @@
 import "./PhotoCard.scss";
 
-function PhotoCard({ url, alt, photographer }) {
+function PhotoCard({ url, alt, photographer, tags,id }) {
   return (
     <div className="photocard">
       <img src={url} alt={alt} />
-      <h2 className="photocard__photographer">{photographer}</h2>;
+      <p className="photocard__photographer">{photographer}</p>
+      <ul className="photocard__tags">
+        {tags.map((tag,index) => {
+          return <li  key={`${id}-${index}`} className="photocard__tag">{tag}</li>;
+        })}
+      </ul>
     </div>
   );
 }
