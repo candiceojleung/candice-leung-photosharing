@@ -1,9 +1,7 @@
-import "./PhotoTags.scss"
+import "./PhotoTags.scss";
 
 function PhotoTags() {
-    return (
-        <></>
-
-    );
+  return <>
+  </>;
 }
-export default PhotoTags
+export default PhotoTags;
