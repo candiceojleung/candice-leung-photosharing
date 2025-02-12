@@ -1,7 +1,13 @@
-import "./PhotoTags.scss";
+import "./Tags.scss";
+import tags from "../../data/tags.json";
 
-function PhotoTags() {
-  return <>
-  </>;
+function Tags() {
+  return (
+    <>
+      {tags.map((tag,index) => {
+        return <button  key={`${index}`} className="tag">{tag}</button>;
+      })}
+    </>
+  );
 }
-export default PhotoTags;
+export default Tags;
