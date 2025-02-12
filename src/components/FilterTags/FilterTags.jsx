@@ -2,15 +2,12 @@ import "./FilterTags.scss";
 import tags from "../../data/tags.json";
 
 function FilterTags({setSelectedFilter}) {
-  const selectedTag = (tag) =>{
-    setSelectedFilter ((selectedBefore) =>{
-    if (selectedBefore === tag){
-      return null; 
-    } else {
-      return tag; 
-    }
-  });
+  const selectedTag = (tag) => {
+    setSelectedFilter((selectedBefore) => 
+      selectedBefore === tag ? null : tag
+    );
   }
+  
   return (
     <>
       {tags.map((tag,index) => {

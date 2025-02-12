@@ -3,13 +3,11 @@ import photos from "../../data/photos.json";
 import PhotoCard from "../PhotoCard/PhotoCard";
 
 function PhotoCardList({ selectedFilter }) {
-  const filteredPhotos = photos.filter((photo) => {
-    if (!selectedFilter) {
-      return photos;
-    } else {
-      return photo.tags.some((tag) => selectedFilter.includes(tag));
-    }
-  });
+  const filteredPhotos = photos.filter((photo) => 
+    !selectedFilter 
+      ? true 
+      : photo.tags.some((tag) => selectedFilter.includes(tag))
+  );
 
   return (
     <section className="photocard-list">
