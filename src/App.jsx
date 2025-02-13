@@ -8,6 +8,7 @@ import PhotoCardList from "./components/PhotoCardList/PhotoCardList";
 
 function App() {
   const [selectedFilter, setSelectedFilter] = useState(null);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const selectedTag = (tag) => {
     setSelectedFilter((selectedBefore) =>
@@ -15,12 +16,17 @@ function App() {
     );
   };
 
+  const toggleDrawer = () => {
+    setIsDrawerOpen((currentState) => !currentState);
+  };
+
   return (
     <>
-      <Header />
+      <Header toggleDrawer={toggleDrawer}/>
       <FilterDrawer
         selectedTag={selectedTag}
         setSelectedFilter={setSelectedFilter}
+        isDrawerOpen={isDrawerOpen}
       />
       <Hero />
       <PhotoCardList selectedFilter={selectedFilter} />

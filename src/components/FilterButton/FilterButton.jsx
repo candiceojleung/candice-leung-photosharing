@@ -1,9 +1,9 @@
 import "./FilterButton.scss";
 
-function FilterButton() {
+function FilterButton({onClick}) {
   return (
     <>
-      <button>
+      <button onClick ={onClick}>
         Filter
         <img src="../src/assets/images/Filter.svg" alt="filter icon"></img>
       </button>

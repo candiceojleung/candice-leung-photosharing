@@ -1,12 +1,12 @@
 import FilterButton from "../FilterButton/FilterButton";
 import "./Header.scss";
 
-function Header() {
+function Header({toggleDrawer}) {
   return (
     <div className="header">
       <h1 className="header__title">Snaps</h1>
       <div className="header__button">
-        <FilterButton />
+        <FilterButton onClick={toggleDrawer}/>
       </div>
     </div>
   );
