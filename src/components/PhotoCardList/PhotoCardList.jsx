@@ -3,9 +3,9 @@ import photos from "../../data/photos.json";
 import PhotoCard from "../PhotoCard/PhotoCard";
 
 function PhotoCardList({ selectedFilter }) {
-  const filteredPhotos = photos.filter((photo) => 
-    !selectedFilter 
-      ? true 
+  const filteredPhotos = photos.filter((photo) =>
+    !selectedFilter
+      ? true
       : photo.tags.some((tag) => selectedFilter.includes(tag))
   );
 

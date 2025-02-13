@@ -1,12 +1,15 @@
-import "./FilterDrawer.scss"
-import FilterTags from "../FilterTags/FilterTags"
+import "./FilterDrawer.scss";
+import FilterTags from "../FilterTags/FilterTags";
 
-function FilterDrawer({setSelectedFilter}) {
-    return (
-        <>
-            <FilterTags setSelectedFilter={setSelectedFilter}/>
-        </>
-    )
+function FilterDrawer({ selectedTag, setSelectedFilter }) {
+  return (
+    <>
+      <FilterTags
+        selectedTag={selectedTag}
+        setSelectedFilter={setSelectedFilter}
+      />
+    </>
+  );
 }
 
-export default FilterDrawer
+export default FilterDrawer;
