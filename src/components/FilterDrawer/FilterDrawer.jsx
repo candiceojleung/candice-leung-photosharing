@@ -12,7 +12,7 @@ function FilterDrawer({ selectedFilter, setSelectedFilter, isDrawerOpen }) {
           tag={tag} 
           isClickable={true} 
           isSelected={selectedFilter === tag}
-          onClick={() => setSelectedFilter(tag === selectedFilter ? null : tag)} 
+          onClick={setSelectedFilter} 
         />
       ))}
     </div>

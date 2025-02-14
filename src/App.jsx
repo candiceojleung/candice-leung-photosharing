@@ -11,9 +11,7 @@ function App() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const selectedTag = (tag) => {
-    setSelectedFilter((currentFilterState) =>
-      currentFilterState === tag ? null : tag
-    );
+    setSelectedFilter(selectedFilter === tag ? null : tag);
   };
 
   const toggleDrawer = () => {

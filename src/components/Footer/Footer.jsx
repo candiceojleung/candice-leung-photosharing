@@ -1,11 +1,19 @@
 import "./Footer.scss";
+import SocialMedia from "../SocialMedia/SocialMedia";
 
 function Footer() {
-  const SocialMedia = ({ href, icon, alt }) => (
-    <a className="social__platform" href={href}>
-      <img className="social__icon" src={icon} alt={alt} />
-    </a>
-  );
+  const resourceInfo = [
+    [
+      { text: "For photographers", href: "#" },
+      { text: "Hire talent", href: "#" },
+      { text: "Inspiration", href: "#" },
+    ],
+    [
+      { text: "About", href: "#" },
+      { text: "Careers", href: "#" },
+      { text: "Support", href: "#" },
+    ],
+  ];
 
   const socialInfo = [
     {
@@ -30,20 +38,21 @@ function Footer() {
     },
   ];
 
+  const footerInfo = ["© 2024 Snaps", "Terms", "Privacy", "Cookies"];
+
   return (
     <>
       <h1 className="footer__title">Snaps</h1>
       <div className="footer__learnmore">
-        <ul className="footer__resources">
-          <li className="footer__resource">For photographers</li>
-          <li className="footer__resource">Hire talent</li>
-          <li className="footer__resource">Inspiration</li>
-        </ul>
-        <ul className="footer__resources">
-          <li className="footer__resource">About</li>
-          <li className="footer__resource">Careers</li>
-          <li className="footer__resource">Support</li>
-        </ul>
+        {resourceInfo.map((learnmore, learnmoreIndex) => (
+          <ul key={learnmoreIndex} className="footer__resources">
+            {learnmore.map((resource, resourceIndex) => (
+              <li key={resourceIndex} className="footer__resource">
+                <a href={resource.href}>{resource.text}</a>
+              </li>
+            ))}
+          </ul>
+        ))}
       </div>
       <div className="social">
         {socialInfo.map((info, index) => (
@@ -51,10 +60,11 @@ function Footer() {
         ))}
       </div>
       <div className="footer__copyright">
-        <p className="footer__info">© 2024 Snaps</p>
-        <p className="footer__info">Terms</p>
-        <p className="footer__info">Privacy</p>
-        <p className="footer__info">Cookies</p>
+        {footerInfo.map((text, index) => (
+          <p key={index} className="footer__info">
+            {text}
+          </p>
+        ))}
       </div>
     </>
   );
