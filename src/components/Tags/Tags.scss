@@ -3,6 +3,12 @@
 .tag{
     padding: 6px 8px; 
     border-radius: 6px; 
+    border: 1px solid $primary-accent; 
+    color:$primary-accent; 
+    &:hover , &--selected{
+        background-color:$primary-accent;
+        color:$secondary-text;
+    }
     @include tablet{
         padding: 8px 12px; 
         border-radius: 12px; 
