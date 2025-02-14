@@ -1,13 +1,13 @@
 import "./Tags.scss";
 
-function Tags({ tag, isSelected, onClick }) {
+function Tags({ tag, isSelected, onClick  }) {
   return (
-    <button
+    <div
     className={`tag ${isSelected ? "tag--selected" : ""}`}
     onClick={onClick ? () => onClick(tag) : undefined} 
     >
       {tag}
-    </button>
+    </div>
   );
 }
   
