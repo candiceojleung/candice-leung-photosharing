@@ -1,0 +1,11 @@
+@use "../../styles/partials/mixins" as*;
+
+.tag{
+    padding: 6px 8px; 
+    border-radius: 6px; 
+    @include tablet{
+        padding: 8px 12px; 
+        border-radius: 12px; 
+    }
+   
+}
