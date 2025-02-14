@@ -1,0 +1,48 @@
+@use "../../styles/partials/mixins" as *;
+.photo {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid $secondary-border;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  @include tablet {
+    width: calc(100% / 2 - 0.75rem);
+  }
+
+  @include desktop {
+    width: calc(100% / 3 - 0.75rem);
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__photographer {
+    position: absolute;
+    background-color: $secondary-background;
+    border-top-left-radius: 10px;
+    padding: 8px;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__tags {
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+    background-color: $secondary-background;
+  }
+  &_tag {
+    background-color: $secondary-text;
+    color: $primary-text;
+    border: 1px solid $secondary-border;
+    padding: 6px 8px;
+    border-radius: 6px;
+  }
+}
