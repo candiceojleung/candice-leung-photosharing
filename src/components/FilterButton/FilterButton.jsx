@@ -1,12 +1,16 @@
 import "./FilterButton.scss";
 
-function FilterButton({onClick}) {
+function FilterButton({ onClick }) {
   return (
     <>
-      <button onClick ={onClick}>
-        Filter
-        <img src="../src/assets/images/Filter.svg" alt="filter icon"></img>
-      </button>
+      <div className="filter-button" onClick={onClick}>
+        <p className="filter-button__text">Filter</p>
+        <img
+          className="filter-button__img"
+          src="../src/assets/images/Filter.svg"
+          alt="filter icon"
+        ></img>
+      </div>
     </>
   );
 }
