@@ -1,7 +1,7 @@
 import "./PhotoCard.scss";
-import Tags from "../Tags/Tags";
+import photos from "../../data/photos.json";
 
-function PhotoCard({ url, alt, photographer, tags}) {
+function PhotoCard({ url, alt, photographer, tags }) {
   return (
     <div className="photo">
       <div className="photo__content">
@@ -10,10 +10,9 @@ function PhotoCard({ url, alt, photographer, tags}) {
       </div>
       <div className="photo__tags">
         {tags.map((tag, index) => (
-          <Tags 
-            tag={tag} 
-            key={index}
-          />
+          <p key={index} className="photo_tag">
+            {tag}
+          </p>
         ))}
       </div>
     </div>
