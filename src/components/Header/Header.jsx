@@ -1,5 +1,4 @@
 import FilterButton from "../FilterButton/FilterButton";
-import FilterDrawer from "../FilterDrawer/FilterDrawer";
 import "./Header.scss";
 
 function Header({ toggleDrawer }) {
