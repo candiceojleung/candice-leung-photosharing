@@ -1,7 +1,6 @@
 .filter-drawer{
-    position:sticky;
-    top:55px;
-    z-index:1; 
-    padding: 24px;
-
+    padding: 16px;
+    display:flex; 
+    flex-wrap:wrap; 
+    gap: 8px; 
 }
