@@ -1,15 +1,21 @@
 import "./PhotoCard.scss";
+import Tags from "../Tags/Tags";
 
-function PhotoCard({ url, alt, photographer, tags,id }) {
+function PhotoCard({ url, alt, photographer, tags}) {
   return (
-    <div className="photocard">
-      <img src={url} alt={alt} />
-      <p className="photocard__photographer">{photographer}</p>
-      <ul className="photocard__tags">
-        {tags.map((tag,index) => {
-          return <li  key={`${index}`} id={id} className="photocard__tag">{tag}</li>;
-        })}
-      </ul>
+    <div className="photo">
+      <div className="photo__content">
+        <img className="photo__image" src={url} alt={alt} />
+        <div className="photo__photographer">{photographer}</div>
+      </div>
+      <div className="photo__tags">
+        {tags.map((tag, index) => (
+          <Tags 
+            tag={tag} 
+            key={index}
+          />
+        ))}
+      </div>
     </div>
   );
 }

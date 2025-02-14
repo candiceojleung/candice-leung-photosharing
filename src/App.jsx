@@ -11,8 +11,8 @@ function App() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const selectedTag = (tag) => {
-    setSelectedFilter((selectedBefore) =>
-      selectedBefore === tag ? null : tag
+    setSelectedFilter((currentFilterState) =>
+      currentFilterState === tag ? null : tag
     );
   };
 
@@ -24,8 +24,8 @@ function App() {
     <>
       <Header toggleDrawer={toggleDrawer}/>
       <FilterDrawer
-        selectedTag={selectedTag}
-        setSelectedFilter={setSelectedFilter}
+        selectedFilter={selectedFilter}
+        setSelectedFilter={selectedTag}
         isDrawerOpen={isDrawerOpen}
       />
       <Hero />
