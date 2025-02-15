@@ -9,6 +9,7 @@
     &:hover , &--selected{
         background-color:$primary-accent;
         color:$secondary-text;
+        cursor:pointer;
     }
     @include tablet{
         padding: 8px 12px; 
