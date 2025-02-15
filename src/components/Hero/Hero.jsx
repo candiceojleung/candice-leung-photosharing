@@ -6,7 +6,7 @@ function Hero() {
     <>
       <div className="hero">
         <p className="hero__title">
-          <BodyCopy light>Our Mission:</BodyCopy>
+          <BodyCopy light>Our mission:</BodyCopy>
         </p>
           <p className="hero__paragraph"><Title >
             Provide photographers a space to share photos of the neighborhoods

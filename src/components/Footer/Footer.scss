@@ -1,68 +1,85 @@
-@use "../../styles/partials/mixins" as*;
+@use "../../styles/partials/mixins" as *;
 
-a{
-    text-decoration:none; 
-    color:$primary-text; 
+a {
+  text-decoration: none;
+  color: $primary-text;
 }
-li{
-    list-style:none; 
+li {
+  list-style: none;
 }
 
-.footer{
-    padding: 24px 16px;
+.footer {
+  padding: 24px 16px;
 
+  @include tablet {
+    padding: 48px 24px;
+  }
+
+  @include desktop {
+    padding: 80px 24px;
+  }
+
+
+  &__learnmore {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 16px;
+
+    @include tablet {
+      flex-direction: row;
+      padding: 0 24px 80px;
+      gap: 48px;
+    }
+
+    @include desktop {
+      flex-direction: row;
+      padding: 0 80px 48px;
+      gap: 80px;
+    }
+  }
+
+  &__resource {
+    padding-bottom: 8px;
+  }
+
+  &__social {
+    padding: 16px 0;
+
+    @include tablet {
+      padding: 24px 0;
+    }
+
+    @include desktop {
+      padding-top: 0;
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    gap: 16px;
+    color: $secondary-border;
+
+    @include desktop {
+      padding-top: 48px;
+    }
+  }
+  
+  &__tablet {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+
+      @include desktop{
+        flex:1; 
+      }
+    }
+  }
+ 
+  &__desktop{
     @include desktop{
-        padding: 80px 24px; 
-
-    }
-
-    &__learnmore{
-        display:flex;
-        flex-direction:column; 
-        gap: 16px;
-        padding-top: 16px; 
-
-        @include desktop{
-            flex-direction:row; 
-            padding:0 80px 48px;
-            gap: 80px;
-        }
-    }
-
-    &__resource{
-        padding-bottom:8px;
-    }
-
-    &__social{
-        padding: 16px 0;
-
-        @include desktop{
-            padding-top:0;
-        }
-
-    }
-
-    &__copyright{
         display:flex; 
-        gap: 16px; 
-        color: $secondary-border;
-
-        @include desktop{
-            padding-top:48px;
-        }
+        justify-content:space-between;
     }
-
-    &__container{
-        @include desktop{
-            display:flex;
-            justify-content:space-between; 
-        }
-    }
-
-    &__right{
-        @include desktop{
-            display:flex; 
-            flex-direction:row; 
-        }
-    }
+  }
 }

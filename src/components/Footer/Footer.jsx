@@ -43,9 +43,9 @@ function Footer() {
 
   return (
     <div className="footer">
-      <div className="footer__container">
-        <Wordmark>Snaps</Wordmark>
-        <div className="footer__right">
+      <div className="footer__desktop">
+        <div className="footer__tablet">
+            <Wordmark className="footer__title">Snaps</Wordmark>
           <BodyCopy>
             <div className="footer__learnmore">
               {resourceInfo.map((learnmore, learnmoreIndex) => (
@@ -59,11 +59,11 @@ function Footer() {
               ))}
             </div>
           </BodyCopy>
-          <div className="footer__social">
-            {socialInfo.map((info, index) => (
-              <SocialMedia key={index} {...info} />
-            ))}
-          </div>
+        </div>
+        <div className="footer__social">
+          {socialInfo.map((info, index) => (
+            <SocialMedia key={index} {...info} />
+          ))}
         </div>
       </div>
       <BodyCopy>

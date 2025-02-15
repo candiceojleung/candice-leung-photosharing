@@ -9,6 +9,7 @@
     @include tablet{
         flex-direction:row; 
         flex-wrap:wrap; 
+        padding: 48px 24px; 
         gap:24px;
     }
 

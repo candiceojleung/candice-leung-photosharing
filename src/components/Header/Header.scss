@@ -10,6 +10,10 @@
     z-index:1; 
     padding: 24px 16px; 
     width:100%; 
+    
+    @include tablet{
+        padding: 24px;
+    }
 
     @include desktop{
         padding: 48px 24px; 
