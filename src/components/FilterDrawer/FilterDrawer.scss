@@ -1,6 +1,17 @@
+@use "../../styles/partials/mixins" as*;
+
 .filter-drawer{
     padding: 16px;
-    display:flex; 
-    flex-wrap:wrap; 
-    gap: 8px; 
+    background-color:$secondary-background;
+
+    &__header{
+        background-color:$secondary-background;
+    }
+
+    &__tags{
+        background-color:$secondary-background;
+        display:flex; 
+        flex-wrap:wrap; 
+        gap:8px;
+    }
 }
