@@ -1,0 +1,110 @@
+@use "../../styles/partials/mixins" as *;
+
+@font-face {
+  font-family: "Newsreader";
+  src: url("../../assets/fonts/Newsreader-Regular.woff") format("woff"),
+    url("../../assets/fonts/Newsreader-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Newsreader";
+  src: url("../../assets/fonts/Newsreader-Light.woff") format("woff"),
+    url("../../assets/fonts/Newsreader-Light.woff2") format("woff2");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Newsreader";
+  src: url("../../assets/fonts/Newsreader-LightItalic.woff") format("woff"),
+    url("../../assets/fonts/Newsreader-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("../../assets/fonts/Outfit-Medium.woff") format("woff"),
+    url("../../assets/fonts/Outfit-Medium.woff2") format("woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("../../assets/fonts/Outfit-Light.woff") format("woff"),
+    url("../../assets/fonts/Outfit-Light.woff2") format("woff2");
+  font-weight: 300;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.wordmark {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 32px;
+  font-family: "Newsreader";
+  @include tablet {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+.title {
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 38px;
+  font-family: "Newsreader";
+  @include tablet {
+    font-size: 52px;
+    line-height: 66px;
+  }
+}
+
+.heading {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  font-family: "Outfit";
+  @include tablet {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+.body-copy {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  font-family: "Outfit";
+  @include tablet {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.small-body-copy {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  font-family: "Outfit";
+  @include tablet {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.label {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  font-family: "Outfit";
+  @include tablet {
+    font-size: 14px;
+    line-height: 17.5px;
+  }
+}

@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-      <Header toggleDrawer={toggleDrawer}/>
+      <Header toggleDrawer={toggleDrawer} isDrawerOpen={isDrawerOpen} />
       <FilterDrawer
         selectedFilter={selectedFilter}
         setSelectedFilter={selectedTag}
