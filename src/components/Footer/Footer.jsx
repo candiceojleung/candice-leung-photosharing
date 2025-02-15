@@ -1,5 +1,7 @@
 import "./Footer.scss";
 import SocialMedia from "../SocialMedia/SocialMedia";
+import { Wordmark } from "../Typography/Typography";
+import { BodyCopy } from "../Typography/Typography";
 
 function Footer() {
   const resourceInfo = [
@@ -42,8 +44,8 @@ function Footer() {
 
   return (
     <>
-      <h1 className="footer__title">Snaps</h1>
-      <div className="footer__learnmore">
+     <h1 className="footer__title"> <Wordmark>Snaps</Wordmark></h1>
+      <BodyCopy><div className="footer__learnmore">
         {resourceInfo.map((learnmore, learnmoreIndex) => (
           <ul key={learnmoreIndex} className="footer__resources">
             {learnmore.map((resource, resourceIndex) => (
@@ -66,6 +68,7 @@ function Footer() {
           </p>
         ))}
       </div>
+      </BodyCopy>
     </>
   );
 }

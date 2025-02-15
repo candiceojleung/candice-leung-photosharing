@@ -1,14 +1,17 @@
 import "./Hero.scss";
+import { BodyCopy, Title } from "../Typography/Typography";
+
 
 function Hero() {
   return (
     <>
     <div className="hero">
-      <p className="hero__title">Our Mission:</p>
-      <p className="hero__paragraph">
-        Provide photographers a space to share photos of the neighborhoods they
-        cherish, <span className= "hero__paragraph--italics">expressed in their unique style.</span> 
-      </p>
+      <p className="hero__title"><BodyCopy>Our Mission:</BodyCopy></p>
+      <h2 className="hero__paragraph">
+      <Title> Provide photographers a space to share photos of the neighborhoods they
+            cherish, </Title> 
+            <span><Title italic>expressed in their unique style.</Title></span>
+      </h2>
       </div>
     </>
   );
