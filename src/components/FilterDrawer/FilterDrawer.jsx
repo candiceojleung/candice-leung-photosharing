@@ -1,8 +1,7 @@
 import "./FilterDrawer.scss"; 
 import tags from "../../data/tags.json"; 
 import Tags from "../Tags/Tags";
-import { Heading } from "../Typography/Typography";
-import { BodyCopy } from "../Typography/Typography";
+import { Heading , BodyCopy } from "../Typography/Typography";
 
 function FilterDrawer({ selectedFilter, setSelectedFilter, isDrawerOpen }) {
     if (!isDrawerOpen) return null;

@@ -1,7 +1,6 @@
 import "./Footer.scss";
 import SocialMedia from "../SocialMedia/SocialMedia";
-import { Wordmark } from "../Typography/Typography";
-import { BodyCopy } from "../Typography/Typography";
+import { Wordmark , BodyCopy } from "../Typography/Typography";
 
 function Footer() {
   const resourceInfo = [

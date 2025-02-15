@@ -35,13 +35,6 @@
   font-weight: 300;
 }
 
-.light {
-  font-weight: 300;
-}
-
-.title .italic, .body-copy .italic {
-  font-style: italic;
-}
 
 .wordmark {
   font-weight: 400;
@@ -59,10 +52,15 @@
   font-size: 26px;
   line-height: 38px;
   font-family: "Newsreader";
+  font-style:normal; 
   @include tablet {
     font-size: 52px;
     line-height: 66px;
   }
+}
+
+.title.italic{
+    font-style:italic; 
 }
 
 .heading {
@@ -86,6 +84,11 @@
     line-height: 26px;
   }
 }
+
+.body-copy.light {
+    font-weight: 300;
+  }
+  
 
 .small-body-copy {
   font-weight: 500;

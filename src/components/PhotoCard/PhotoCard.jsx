@@ -1,6 +1,6 @@
 import { SmallBodyCopy } from "../Typography/Typography";
 import "./PhotoCard.scss";
-SmallBodyCopy
+
 
 function PhotoCard({ url, alt, photographer, tags }) {
   return (
