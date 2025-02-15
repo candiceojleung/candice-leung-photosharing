@@ -1,5 +1,4 @@
 import "./PhotoCard.scss";
-import photos from "../../data/photos.json";
 
 function PhotoCard({ url, alt, photographer, tags }) {
   return (
