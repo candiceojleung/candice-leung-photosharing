@@ -4,9 +4,9 @@ function FilterButton({ onClick }) {
   return (
     <>
       <div className="filter-button" onClick={onClick}>
-        <p className="filter-button__text">Filter</p>
+       Filter
         <img
-          className="filter-button__img"
+        className="filter-button__img"
           src="../src/assets/images/Filter.svg"
           alt="filter icon"
         ></img>

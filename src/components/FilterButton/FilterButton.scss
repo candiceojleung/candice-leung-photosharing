@@ -10,17 +10,11 @@
   border-radius: 50px;
 
   &:hover {
-    color: $secondary-text;
     background-color: $primary-accent;
+    color:$secondary-text;
   }
+
   @include tablet {
     padding: 11px 22px;
-  }
-
-  &__text, &__img{
-    &:hover{
-        filter:brightness(0) invert(1);
-
-    }
   }
 }
