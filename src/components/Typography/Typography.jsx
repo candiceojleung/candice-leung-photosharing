@@ -4,7 +4,7 @@ export const Wordmark = ({ children }) => (
   <h1 className="wordmark">{children}</h1>
 );
 export const Title = ({ children , italic}) => (
-  <h2 className={`title ${italic ? "italic":""}`}>{children}</h2>
+  <span className={`title ${italic ? "italic":""}`}>{children}</span>
 );
 export const Heading = ({ children }) => (
   <h3 className="heading">{children}</h3>

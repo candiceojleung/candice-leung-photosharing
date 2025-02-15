@@ -9,15 +9,13 @@ li{
 }
 
 .footer{
-    &__title{
-        padding:24px 16px;
-    }
+    padding: 24px 16px;
 
     &__learnmore{
         display:flex;
         flex-direction:column; 
         gap: 16px;
-        padding:16px;
+        padding-top: 16px; 
     }
 
     &__resource{
@@ -25,13 +23,13 @@ li{
     }
 
     &__social{
-        padding:16px; 
+        padding: 16px 0;
+
     }
 
     &__copyright{
         display:flex; 
         gap: 16px; 
-        padding-left: 16px;
         color: $secondary-border;
     }
 }

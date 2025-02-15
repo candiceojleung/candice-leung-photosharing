@@ -1,6 +1,6 @@
 import "./Footer.scss";
 import SocialMedia from "../SocialMedia/SocialMedia";
-import { Wordmark , BodyCopy } from "../Typography/Typography";
+import { Wordmark, BodyCopy } from "../Typography/Typography";
 
 function Footer() {
   const resourceInfo = [
@@ -42,33 +42,34 @@ function Footer() {
   const footerInfo = ["© 2024 Snaps", "Terms", "Privacy", "Cookies"];
 
   return (
-    <>
-     <h1 className="footer__title"> <Wordmark>Snaps</Wordmark></h1>
-      <BodyCopy><div className="footer__learnmore">
-        {resourceInfo.map((learnmore, learnmoreIndex) => (
-          <ul key={learnmoreIndex} className="footer__resources">
-            {learnmore.map((resource, resourceIndex) => (
-              <li key={resourceIndex} className="footer__resource">
-                <a href={resource.href}>{resource.text}</a>
-              </li>
-            ))}
-          </ul>
-        ))}
-      </div>
-      <div className="footer__social">
-        {socialInfo.map((info, index) => (
-          <SocialMedia key={index} {...info} />
-        ))}
-      </div>
-      <div className="footer__copyright">
-        {footerInfo.map((text, index) => (
-          <p key={index} className="footer__info">
-            {text}
-          </p>
-        ))}
-      </div>
+    <div className="footer">
+      <Wordmark>Snaps</Wordmark>
+      <BodyCopy>
+        <div className="footer__learnmore">
+          {resourceInfo.map((learnmore, learnmoreIndex) => (
+            <ul key={learnmoreIndex} className="footer__resources">
+              {learnmore.map((resource, resourceIndex) => (
+                <li key={resourceIndex} className="footer__resource">
+                  <a href={resource.href}>{resource.text}</a>
+                </li>
+              ))}
+            </ul>
+          ))}
+        </div>
+        <div className="footer__social">
+          {socialInfo.map((info, index) => (
+            <SocialMedia key={index} {...info} />
+          ))}
+        </div>
+        <div className="footer__copyright">
+          {footerInfo.map((text, index) => (
+            <p key={index} className="footer__info">
+              {text}
+            </p>
+          ))}
+        </div>
       </BodyCopy>
-    </>
+    </div>
   );
 }
 
