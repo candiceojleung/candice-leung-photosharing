@@ -1,2 +1,27 @@
 @use "./styles/partials/global" as *;
+@use "./styles/partials/mixins" as*;
+
+.desktop{
+    @include desktop{
+        display:flex; 
+    }
+
+    &__left{
+    @include desktop{
+        order:-1;
+        width:70%; 
+    }
+
+    }
+
+    &__right{
+
+    @include desktop{
+        width: 30%;
+    }
+
+    }
+
+
+}
 

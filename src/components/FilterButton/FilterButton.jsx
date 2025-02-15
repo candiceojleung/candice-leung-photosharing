@@ -11,7 +11,7 @@ function FilterButton({ onClick, isDrawerOpen }) {
         }`}
         onClick={onClick}
       >
-       Filter
+       Filters
         <svg
           className={`filter-button__icon ${
             isDrawerOpen ? "filter-button__icon--clicked" : ""

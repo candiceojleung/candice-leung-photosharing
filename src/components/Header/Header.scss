@@ -1,3 +1,5 @@
+@use "../../styles/partials/mixins" as *; 
+
 .header{
     display:flex; 
     justify-content:space-between;
@@ -8,4 +10,8 @@
     z-index:1; 
     padding: 24px 16px; 
     width:100%; 
+
+    @include desktop{
+        padding: 48px 24px; 
+    }
 }

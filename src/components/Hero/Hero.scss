@@ -1,6 +1,12 @@
+@use "../../styles/partials/mixins" as *;
+
 .hero{
     padding: 24px 16px 0;
     &__title{
         padding-bottom:16px;
+    }
+
+    @include desktop{
+        padding: 80px 24px 0; 
     }
 }

@@ -1,18 +1,16 @@
 @use "../../styles/partials/mixins" as *;
 .photo {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 8px;
   border: 1px solid $secondary-border;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   @include tablet {
     width: calc(100% / 2 - 0.75rem);
+    border-radius:12px; 
   }
 
-  @include desktop {
-    width: calc(100% / 3 - 0.75rem);
-  }
 
   &__content {
     position: relative;
@@ -38,6 +36,9 @@
     gap: 8px;
     padding: 8px;
     background-color: $secondary-background;
+    @include tablet{
+      padding: 16px;
+    }
   }
   &_tag {
     background-color: $secondary-text;
@@ -45,6 +46,10 @@
     border: 1px solid $secondary-border;
     padding: 6px 8px;
     border-radius: 6px;
+      @include tablet{
+        border-radius:12px; 
+        padding: 8px 12px; 
+      }
 
     &:hover{
       background-color:$secondary-border; 

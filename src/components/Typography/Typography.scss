@@ -12,6 +12,7 @@
   src: url("../../assets/fonts/Newsreader-Light.woff") format("woff"),
     url("../../assets/fonts/Newsreader-Light.woff2") format("woff2");
   font-weight: 300;
+  font-style:normal;
 }
 
 @font-face {
@@ -19,6 +20,7 @@
   src: url("../../assets/fonts/Newsreader-LightItalic.woff") format("woff"),
     url("../../assets/fonts/Newsreader-LightItalic.woff2") format("woff2");
   font-weight: 300;
+  font-style:italic;
 }
 
 @font-face {
@@ -79,6 +81,7 @@
   font-size: 12px;
   line-height: 15px;
   font-family: "Outfit";
+  background-color:transparent; 
   @include tablet {
     font-size: 20px;
     line-height: 26px;

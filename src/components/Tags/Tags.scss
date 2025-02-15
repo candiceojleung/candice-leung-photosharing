@@ -6,6 +6,7 @@
     border: 1px solid $primary-accent; 
     color:$primary-accent; 
     background-color:$secondary-text;
+
     &:hover , &--selected{
         background-color:$primary-accent;
         color:$secondary-text;

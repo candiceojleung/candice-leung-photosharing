@@ -1,6 +1,19 @@
+@use "../../styles/partials/mixins" as *; 
+
 .photocard-list{
     display:flex;
     flex-direction:column; 
     gap: 16px; 
     padding: 48px 16px; 
+
+    @include tablet{
+        flex-direction:row; 
+        flex-wrap:wrap; 
+        gap:24px;
+    }
+
+    @include desktop{
+        padding: 80px 24px; 
+
+    }
 }

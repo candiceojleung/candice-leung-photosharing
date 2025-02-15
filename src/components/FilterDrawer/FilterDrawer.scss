@@ -3,10 +3,21 @@
 .filter-drawer{
     padding: 16px;
     background-color:$secondary-background;
+    @include desktop{
+        padding: 48px; 
+    }
+
+    @include desktop{
+        height:100%; 
+    }
 
     &__header{
         background-color:$secondary-background;
         padding-bottom: 16px;
+
+        @include desktop{
+            padding-bottom:48px;
+        }
     }
 
     &__tags{
@@ -14,5 +25,8 @@
         display:flex; 
         flex-wrap:wrap; 
         gap:8px;
+
+
+
     }
 }
