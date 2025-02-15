@@ -1,19 +1,26 @@
 @use "../../styles/partials/mixins" as *;
 
-.hero{
-    padding: 24px 16px 0;
+.hero {
+  padding: 24px 16px 0;
 
-    &__title{
-        padding-bottom:16px;
-        @include tablet{
-            padding-bottom:24px; 
-        }
+  &__title {
+    padding-bottom: 16px;
+    @include tablet {
+      padding-bottom: 24px;
     }
+  }
 
-    @include tablet{
-        padding: 24px; 
+  @include tablet {
+    padding: 24px;
+  }
+  @include desktop {
+    padding: 80px 24px 0;
+  }
+
+  &__paragraph {
+    @include desktop {
+      min-width: 50vw;
+      width: 50%;
     }
-    @include desktop{
-        padding: 80px 24px 0; 
-    }
+  }
 }

@@ -21,18 +21,23 @@ function App() {
   return (
     <>
       <Header toggleDrawer={toggleDrawer} isDrawerOpen={isDrawerOpen} />
-      <div className= "desktop">
-      <div className= "desktop__right">
-      <FilterDrawer
-        selectedFilter={selectedFilter}
-        setSelectedFilter={selectedTag}
-        isDrawerOpen={isDrawerOpen}
-      />
-      </div>
-      <div className ="desktop__left">
-      <Hero />
-      <PhotoCardList selectedFilter={selectedFilter} />
-      </div>
+      <div
+        className={`desktop ${isDrawerOpen ? "drawer-open" : "drawer-closed"}`}
+      >
+        <div className="desktop__right">
+          <FilterDrawer
+            selectedFilter={selectedFilter}
+            setSelectedFilter={selectedTag}
+            isDrawerOpen={isDrawerOpen}
+          />
+        </div>
+        <div className="desktop__left">
+          <Hero />
+          <PhotoCardList
+            selectedFilter={selectedFilter}
+            isDrawerOpen={isDrawerOpen}
+          />
+        </div>
       </div>
       <Footer />
     </>

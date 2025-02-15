@@ -1,20 +1,33 @@
-@use "../../styles/partials/mixins" as *; 
+@use "../../styles/partials/mixins" as *;
 
-.photocard-list{
-    display:flex;
-    flex-direction:column; 
-    gap: 16px; 
-    padding: 48px 16px; 
+.photocard-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 48px 16px;
 
-    @include tablet{
-        flex-direction:row; 
-        flex-wrap:wrap; 
-        padding: 48px 24px; 
-        gap:24px;
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 48px 24px;
+    gap: 24px;
+  }
+
+  @include desktop {
+    padding: 80px 24px;
+  }
+
+  @include desktop {
+    .photo {
+      width: calc(100% / 3 - 16px);
     }
+  }
 
-    @include desktop{
-        padding: 80px 24px; 
-
+  &.drawer-open {
+    @include desktop {
+      .photo {
+        width: calc(50% - 12px);
+      }
     }
+  }
 }

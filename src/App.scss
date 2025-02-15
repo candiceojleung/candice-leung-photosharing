@@ -1,27 +1,37 @@
 @use "./styles/partials/global" as *;
-@use "./styles/partials/mixins" as*;
+@use "./styles/partials/mixins" as *;
 
-.desktop{
-    @include desktop{
-        display:flex; 
-    }
+.desktop {
+  @include desktop {
+    display: flex;
+  }
 
-    &__left{
-    @include desktop{
-        order:-1;
-        width:70%; 
-    }
+  &.drawer-open {
+    @include desktop {
+      .desktop__left {
+        width: 70%;
+      }
 
-    }
-
-    &__right{
-
-    @include desktop{
+      .desktop__right {
         width: 30%;
+      }
     }
+  }
 
+  &.drawer-closed {
+    @include desktop {
+      .desktop__left {
+        width: 100%;
+      }
+      .desktop__right {
+        display: none;
+      }
     }
+  }
 
-
+  &__left {
+    @include desktop {
+      order: -1;
+    }
+  }
 }
-

@@ -7,10 +7,12 @@
   flex-direction: column;
   overflow: hidden;
   @include tablet {
-    width: calc(100% / 2 - 0.75rem);
-    border-radius:12px; 
+    width: calc(50% - 0.75rem);
+    border-radius: 12px;
   }
-
+  @include desktop {
+    width: calc(33.333% - 0.75rem);
+  }
 
   &__content {
     position: relative;
@@ -26,7 +28,7 @@
     position: absolute;
     background-color: $secondary-background;
     border-top-left-radius: 10px;
-    border-bottom:0.5px solid $secondary-border;
+    border-bottom: 0.5px solid $secondary-border;
     right: 0;
     bottom: 0;
   }
@@ -36,7 +38,7 @@
     gap: 8px;
     padding: 8px;
     background-color: $secondary-background;
-    @include tablet{
+    @include tablet {
       padding: 16px;
     }
   }
@@ -46,13 +48,19 @@
     border: 1px solid $secondary-border;
     padding: 6px 8px;
     border-radius: 6px;
-      @include tablet{
-        border-radius:12px; 
-        padding: 8px 12px; 
-      }
+    @include tablet {
+      border-radius: 12px;
+      padding: 8px 12px;
+    }
 
-    &:hover{
-      background-color:$secondary-border; 
+    &:hover {
+      background-color: $secondary-border;
+    }
+
+    &.drawer-open {
+      @include desktop {
+        width: calc(50% - 0.75rem);
+      }
     }
   }
 }

@@ -1,42 +1,37 @@
-@use "../../styles/partials/mixins" as*;
+@use "../../styles/partials/mixins" as *;
 
-.filter-drawer{
-    padding: 16px;
-    background-color:$secondary-background;
+.filter-drawer {
+  padding: 16px;
+  background-color: $secondary-background;
 
-    @include tablet{
-        padding:48px 24px; 
-    }
-    @include desktop{
-        padding: 48px; 
-        height:100%; 
-    }
+  @include tablet {
+    padding: 48px 24px;
+  }
+  @include desktop {
+    padding: 48px;
+    height: 100%;
+  }
 
+  &__header {
+    background-color: $secondary-background;
+    padding-bottom: 16px;
 
-    &__header{
-        background-color:$secondary-background;
-        padding-bottom: 16px;
-
-        @include tablet{
-            padding-bottom: 48px;
-        }
-
-        @include desktop{
-            padding-bottom:48px;
-        }
+    @include tablet {
+      padding-bottom: 48px;
     }
 
-    &__tags{
-        background-color:$secondary-background;
-        display:flex; 
-        flex-wrap:wrap; 
-        gap:8px;
-        @include tablet{
-            padding-bottom:48px; 
-        }
-      
-
-
-
+    @include desktop {
+      padding-bottom: 48px;
     }
+  }
+
+  &__tags {
+    background-color: $secondary-background;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    @include tablet {
+      padding-bottom: 48px;
+    }
+  }
 }
