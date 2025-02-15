@@ -8,13 +8,27 @@
   gap: 8px;
   border: 2px solid $primary-accent;
   border-radius: 50px;
+  cursor:pointer;
 
-  &:hover {
+  @include tablet{
+    padding: 11px 22px;
+  }
+
+  &:hover, &--clicked {
     background-color: $primary-accent;
     color:$secondary-text;
+  }
+
+  &__icon{
+    fill: $primary-accent; 
+    &:hover, &--clicked{
+      background-color:$primary-accent;
+      fill:$secondary-text;
+    }
   }
 
   @include tablet {
     padding: 11px 22px;
   }
+
 }
