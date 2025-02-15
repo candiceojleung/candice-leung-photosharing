@@ -54,7 +54,7 @@ function Footer() {
           </ul>
         ))}
       </div>
-      <div className="social">
+      <div className="footer__social">
         {socialInfo.map((info, index) => (
           <SocialMedia key={index} {...info} />
         ))}

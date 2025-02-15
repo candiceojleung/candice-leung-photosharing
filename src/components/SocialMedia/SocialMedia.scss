@@ -1,0 +1,7 @@
+@use "../../styles/partials/mixins" as*;
+
+.social{
+    &__icon{
+        padding-right: 16px; 
+    }
+}
