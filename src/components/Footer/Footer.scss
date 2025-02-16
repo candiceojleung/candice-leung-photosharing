@@ -19,23 +19,28 @@ li {
     padding: 80px 24px;
   }
 
+  &__title{
+    padding: 24px 0; 
+
+    @include tablet{
+      padding-top:0; 
+    }
+  }
 
   &__learnmore {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding-top: 16px;
 
     @include tablet {
       flex-direction: row;
       padding: 0 24px 80px;
-      gap: 48px;
+      gap: 80px;
     }
 
     @include desktop {
       flex-direction: row;
       padding: 0 80px 48px;
-      gap: 80px;
     }
   }
 

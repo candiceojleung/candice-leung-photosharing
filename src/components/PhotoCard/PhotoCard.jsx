@@ -1,9 +1,9 @@
 import { SmallBodyCopy } from "../Typography/Typography";
 import "./PhotoCard.scss";
 
-function PhotoCard({ url, alt, photographer, tags, isDrawerOpen }) {
+function PhotoCard({ url, alt, photographer, tags }) {
   return (
-    <div className={`photo ${isDrawerOpen ? "drawer-open" : ""}`}>
+    <div className= "photo">
       <div className="photo__content">
         <img className="photo__image" src={url} alt={alt} />
         <SmallBodyCopy>

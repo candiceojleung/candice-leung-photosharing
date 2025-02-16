@@ -45,7 +45,7 @@ function Footer() {
     <div className="footer">
       <div className="footer__desktop">
         <div className="footer__tablet">
-            <Wordmark className="footer__title">Snaps</Wordmark>
+            <p className="footer__title"><Wordmark >Snaps</Wordmark></p>
           <BodyCopy>
             <div className="footer__learnmore">
               {resourceInfo.map((learnmore, learnmoreIndex) => (

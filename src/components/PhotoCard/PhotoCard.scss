@@ -56,11 +56,5 @@
     &:hover {
       background-color: $secondary-border;
     }
-
-    &.drawer-open {
-      @include desktop {
-        width: calc(50% - 0.75rem);
-      }
-    }
   }
 }
