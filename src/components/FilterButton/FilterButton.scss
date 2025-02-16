@@ -8,27 +8,27 @@
   gap: 8px;
   border: 2px solid $primary-accent;
   border-radius: 60px;
-  cursor:pointer;
-
-  @include tablet{
-    padding: 11px 22px;
-  }
-
-  &:hover, &--clicked {
-    background-color: $primary-accent;
-    color:$secondary-text;
-  }
-
-  &__icon{
-    fill: $primary-accent; 
-    &:hover, &--clicked{
-      background-color:$primary-accent;
-      fill:$secondary-text;
-    }
-  }
+  cursor: pointer;
 
   @include tablet {
     padding: 11px 22px;
   }
 
+  &:hover,
+  &--clicked {
+    background-color: $primary-accent;
+    color: $secondary-text;
+    .filter-button__icon {
+      filter: brightness(0) invert(1);
+  }
+}
+
+  @include tablet {
+    padding: 11px 22px;
+  }  
+
+  &__icon{
+    background-color: transparent;
+
+  }
 }

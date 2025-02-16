@@ -1,6 +1,6 @@
 import "./Footer.scss";
 import SocialMedia from "../SocialMedia/SocialMedia";
-import { Wordmark, BodyCopy } from "../Typography/Typography";
+import { Wordmark, BodyCopy , Label } from "../Typography/Typography";
 
 function Footer() {
   const resourceInfo = [
@@ -66,7 +66,7 @@ function Footer() {
           ))}
         </div>
       </div>
-      <BodyCopy>
+      <Label>
         <div className="footer__copyright">
           {footerInfo.map((text, index) => (
             <p key={index} className="footer__info">
@@ -74,7 +74,7 @@ function Footer() {
             </p>
           ))}
         </div>
-      </BodyCopy>
+      </Label>
     </div>
   );
 }
