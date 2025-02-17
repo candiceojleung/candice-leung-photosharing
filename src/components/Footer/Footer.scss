@@ -9,7 +9,8 @@ li {
 }
 
 .footer {
-  padding: 24px 16px;
+  padding: 0 16px 24px;
+  color: $primary-text;
 
   @include tablet {
     padding: 48px 24px;

@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
+  color: $primary-accent;
   border: 2px solid $primary-accent;
   border-radius: 60px;
   cursor: pointer;
@@ -22,10 +23,6 @@
       filter: brightness(0) invert(1);
   }
 }
-
-  @include tablet {
-    padding: 11px 22px;
-  }  
 
   &__icon{
     background-color: transparent;

@@ -1,6 +1,7 @@
 @use "../../styles/partials/mixins" as *; 
 
 .header{
+    color: $primary-text;
     display:flex; 
     justify-content:space-between;
     align-items:center; 
@@ -12,7 +13,7 @@
     width:100%; 
     
     @include tablet{
-        padding: 24px;
+        padding: 48px 24px;
     }
 
     @include desktop{

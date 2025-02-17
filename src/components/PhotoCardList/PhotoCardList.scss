@@ -1,6 +1,7 @@
 @use "../../styles/partials/mixins" as *;
 
 .photocard-list {
+  color: $primary-text;
   display: flex;
   flex-direction: column;
   gap: 16px;

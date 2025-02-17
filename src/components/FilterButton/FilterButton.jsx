@@ -1,5 +1,5 @@
 import "./FilterButton.scss";
-import { BodyCopy } from "../Typography/Typography";
+import { Label } from "../Typography/Typography";
 
 function FilterButton({onClick, isDrawerOpen }) {
   return (
@@ -10,7 +10,7 @@ function FilterButton({onClick, isDrawerOpen }) {
           }`}
           onClick={onClick}
         >
-             <BodyCopy>Filters</BodyCopy>
+             <Label>Filters</Label>
           <img
             className="filter-button__icon"
             src="../src/assets/images/Filter.svg"

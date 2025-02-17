@@ -3,6 +3,7 @@
 .filter-drawer {
   padding: 16px;
   background-color: $secondary-background;
+  color: $primary-text;
 
   @include tablet {
     padding: 48px 24px;

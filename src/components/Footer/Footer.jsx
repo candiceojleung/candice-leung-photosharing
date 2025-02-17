@@ -39,13 +39,13 @@ function Footer() {
     },
   ];
 
-  const footerInfo = ["© 2024 Snaps", "Terms", "Privacy", "Cookies"];
+  const footerInfo = ["© 2024 Snaps", ". Terms", "Privacy", "Cookies"];
 
   return (
     <div className="footer">
       <div className="footer__desktop">
         <div className="footer__tablet">
-            <p className="footer__title"><Wordmark >Snaps</Wordmark></p>
+           <Wordmark > <p className="footer__title">Snaps</p></Wordmark>
           <BodyCopy>
             <div className="footer__learnmore">
               {resourceInfo.map((learnmore, learnmoreIndex) => (

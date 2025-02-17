@@ -1,6 +1,7 @@
 @use "../../styles/partials/mixins" as *;
 
 .hero {
+  color: $primary-text;
   padding: 24px 16px 0;
 
   &__title {
