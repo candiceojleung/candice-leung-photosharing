@@ -8,10 +8,15 @@ function Hero() {
         <p className="hero__title">
           <BodyCopy light>Our mission:</BodyCopy>
         </p>
-          <p className="hero__paragraph"><Title >
+        <p className="hero__paragraph">
+          <Title>
             Provide photographers a space to share photos of the neighborhoods
-            they cherish, <Title italic><span>expressed in their unique style.</span></Title>
-          </Title></p>
+            they cherish,{" "}
+            <Title italic>
+              <span>expressed in their unique style.</span>
+            </Title>
+          </Title>
+        </p>
       </div>
     </>
   );

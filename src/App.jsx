@@ -22,7 +22,9 @@ function App() {
     <>
       <Header toggleDrawer={toggleDrawer} isDrawerOpen={isDrawerOpen} />
       <div
-        className={`desktop-screen  ${isDrawerOpen ? "drawer-open" : "drawer-closed"}`}
+        className={`desktop-screen  ${
+          isDrawerOpen ? "drawer-open" : "drawer-closed"
+        }`}
       >
         <div className="desktop-screen__right">
           <FilterDrawer

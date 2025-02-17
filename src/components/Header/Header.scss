@@ -1,18 +1,18 @@
-@use "../../styles/partials/mixins" as *; 
+@use "../../styles/partials/mixins" as *;
 
-.header{
-    color: $primary-text;
-    display:flex; 
-    justify-content:space-between;
-    align-items:center; 
-    height:auto; 
-    position:sticky; 
-    top:0; 
-    z-index:1; 
-    padding: 1.5rem 1rem; 
-    width:100%; 
-    
-    @include tablet{
-        padding: 2rem 1.5rem;
-    }
+.header {
+  color: $primary-text;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 1.5rem 1rem;
+  width: 100%;
+
+  @include tablet {
+    padding: 2rem 1.5rem;
+  }
 }

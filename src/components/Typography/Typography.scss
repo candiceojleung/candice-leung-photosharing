@@ -12,7 +12,7 @@
   src: url("../../assets/fonts/Newsreader-Light.woff") format("woff"),
     url("../../assets/fonts/Newsreader-Light.woff2") format("woff2");
   font-weight: 300;
-  font-style:normal;
+  font-style: normal;
 }
 
 @font-face {
@@ -20,7 +20,7 @@
   src: url("../../assets/fonts/Newsreader-LightItalic.woff") format("woff"),
     url("../../assets/fonts/Newsreader-LightItalic.woff2") format("woff2");
   font-weight: 300;
-  font-style:italic;
+  font-style: italic;
 }
 
 @font-face {
@@ -36,7 +36,6 @@
     url("../../assets/fonts/Outfit-Light.woff2") format("woff2");
   font-weight: 300;
 }
-
 
 .wordmark {
   font-weight: 400;
@@ -58,13 +57,13 @@
     font-size: 2.5rem;
     line-height: 4.125rem;
   }
-  @include desktop{
-    font-size:3.25rem;
+  @include desktop {
+    font-size: 3.25rem;
   }
 }
 
-.title.italic{
-    font-style:italic; 
+.title.italic {
+  font-style: italic;
 }
 
 .heading {
@@ -72,7 +71,7 @@
   font-size: 1.125rem;
   line-height: 1.4375rem;
   font-family: "Outfit";
-  background:transparent; 
+  background: transparent;
   @include tablet {
     font-size: 1.5rem;
     line-height: 1.875rem;
@@ -82,9 +81,9 @@
 .body-copy {
   font-weight: 500;
   font-size: 0.75rem;
-  line-height:0.9375rem;
+  line-height: 0.9375rem;
   font-family: "Outfit";
-  background-color:transparent; 
+  background-color: transparent;
   @include tablet {
     font-size: 1.25rem;
     line-height: 1.625rem;
@@ -92,9 +91,8 @@
 }
 
 .body-copy.light {
-    font-weight: 300;
-  }
-  
+  font-weight: 300;
+}
 
 .small-body-copy {
   font-weight: 500;
@@ -103,16 +101,16 @@
   font-family: "Outfit";
   @include tablet {
     font-size: 0.75rem;
-    line-height:0.9375rem;
+    line-height: 0.9375rem;
   }
 }
 
 .label {
   font-weight: 500;
   font-size: 0.75rem;
-  line-height:0.9375rem;
+  line-height: 0.9375rem;
   font-family: "Outfit";
-  background-color:transparent; 
+  background-color: transparent;
   @include tablet {
     font-size: 0.875rem;
     line-height: 1.0938rem;

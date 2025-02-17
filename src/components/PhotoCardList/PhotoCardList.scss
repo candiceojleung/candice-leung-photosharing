@@ -14,9 +14,9 @@
     gap: 1.5rem;
   }
 
-@include desktop{
-  padding-top:5rem;
-}
+  @include desktop {
+    padding-top: 5rem;
+  }
 
   @include desktop {
     .photo {
@@ -26,7 +26,7 @@
 
   &.drawer-open {
     @include desktop {
-      padding-top: 4rem; 
+      padding-top: 4rem;
       .photo {
         width: calc(50% - 0.75rem);
       }

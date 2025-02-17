@@ -3,8 +3,8 @@ import "./Typography.scss";
 export const Wordmark = ({ children }) => (
   <h1 className="wordmark">{children}</h1>
 );
-export const Title = ({ children , italic}) => (
-  <span className={`title ${italic ? "italic":""}`}>{children}</span>
+export const Title = ({ children, italic }) => (
+  <span className={`title ${italic ? "italic" : ""}`}>{children}</span>
 );
 export const Heading = ({ children }) => (
   <h3 className="heading">{children}</h3>

@@ -1,9 +1,9 @@
 import "./Footer.scss";
 import SocialMedia from "../SocialMedia/SocialMedia";
-import { Wordmark, BodyCopy , Label } from "../Typography/Typography";
+import { Wordmark, BodyCopy, Label } from "../Typography/Typography";
 
 function Footer() {
-  const resourceInfo = [
+  const learnMoreInfo = [
     [
       { text: "For photographers", href: "#" },
       { text: "Hire talent", href: "#" },
@@ -45,11 +45,14 @@ function Footer() {
     <div className="footer">
       <div className="footer__desktop-container">
         <div className="footer__tablet-container">
-           <Wordmark > <p className="footer__title">Snaps</p></Wordmark>
+          <Wordmark>
+            {" "}
+            <p className="footer__title">Snaps</p>
+          </Wordmark>
           <BodyCopy>
             <div className="footer__learnmore">
-              {resourceInfo.map((learnmore, learnmoreIndex) => (
-                <ul key={learnmoreIndex} className="footer__resources">
+              {learnMoreInfo.map((learnmore, learnMoreIndex) => (
+                <ul key={learnMoreIndex} className="footer__resources">
                   {learnmore.map((resource, resourceIndex) => (
                     <li key={resourceIndex} className="footer__resource">
                       <a href={resource.href}>{resource.text}</a>

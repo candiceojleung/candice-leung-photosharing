@@ -3,7 +3,7 @@ import "./PhotoCard.scss";
 
 function PhotoCard({ url, alt, photographer, tags }) {
   return (
-    <div className= "photo">
+    <div className="photo">
       <div className="photo__content">
         <img className="photo__image" src={url} alt={alt} />
         <SmallBodyCopy>
