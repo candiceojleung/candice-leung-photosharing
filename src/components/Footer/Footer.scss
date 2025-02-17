@@ -9,19 +9,19 @@ li {
 }
 
 .footer {
-  padding: 0 16px 24px;
+  padding: 0 1rem 1.5rem;
   color: $primary-text;
 
   @include tablet {
-    padding: 48px 24px;
+    padding: 3rem 1.5rem;
   }
 
   @include desktop {
-    padding: 80px 24px;
+    padding: 5rem 1.5rem 3rem;
   }
 
   &__title{
-    padding: 24px 0; 
+    padding: 1.5rem 0; 
 
     @include tablet{
       padding-top:0; 
@@ -31,28 +31,28 @@ li {
   &__learnmore {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 1rem;
 
     @include tablet {
       flex-direction: row;
-      padding: 0 24px 80px;
-      gap: 80px;
+      padding: 0 1.5rem 5rem;
+      gap: 5rem;
     }
 
     @include desktop {
-      padding: 0 80px 48px;
+      padding: 0 5rem 5rem;
     }
   }
 
   &__resource {
-    padding-bottom: 8px;
+    padding-bottom: 0.5rem;
   }
 
   &__social {
-    padding: 16px 0;
+    padding: 1rem 0;
 
     @include tablet {
-      padding: 24px 0;
+      padding: 1.5rem 0;
     }
 
     @include desktop {
@@ -62,11 +62,11 @@ li {
 
   &__copyright {
     display: flex;
-    gap: 16px;
+    gap: 1rem;
     color: $secondary-border;
 
     @include desktop {
-      padding-top: 48px;
+      padding-top: 3rem;
     }
   }
   

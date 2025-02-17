@@ -4,31 +4,31 @@
   color: $primary-text;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 48px 16px;
+  gap: 1rem;
+  padding: 3rem 1rem;
 
   @include tablet {
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 48px 24px;
-    gap: 24px;
+    padding: 3rem 1.5rem;
+    gap: 1.5rem;
   }
 
 @include desktop{
-  padding-top:80px;
+  padding-top:5rem;
 }
 
   @include desktop {
     .photo {
-      width: calc(100% / 3 - 16px);
+      width: calc(100% / 3 - 1rem);
     }
   }
 
   &.drawer-open {
     @include desktop {
-      padding-top: 64px; 
+      padding-top: 4rem; 
       .photo {
-        width: calc(50% - 12px);
+        width: calc(50% - 0.75rem);
       }
     }
   }

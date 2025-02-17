@@ -1,18 +1,18 @@
 @use "../../styles/partials/mixins" as *;
 
 .filter-button {
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
   color: $primary-accent;
-  border: 2px solid $primary-accent;
-  border-radius: 60px;
+  border: 0.125rem solid $primary-accent;
+  border-radius:3.75rem;
   cursor: pointer;
 
   @include tablet {
-    padding: 11px 32px;
+    padding: 0.6875rem 2rem;
   }
 
   &:hover,

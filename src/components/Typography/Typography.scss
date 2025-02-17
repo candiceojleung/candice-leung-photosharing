@@ -40,26 +40,26 @@
 
 .wordmark {
   font-weight: 400;
-  font-size: 32px;
-  line-height: 32px;
+  font-size: 2rem;
+  line-height: 2rem;
   font-family: "Newsreader";
   @include tablet {
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
   }
 }
 
 .title {
   font-weight: 300;
-  font-size: 26px;
-  line-height: 38px;
+  font-size: 1.625rem;
+  line-height: 2.375rem;
   font-family: "Newsreader";
   @include tablet {
-    font-size: 40px;
-    line-height: 66px;
+    font-size: 2.5rem;
+    line-height: 4.125rem;
   }
   @include desktop{
-    font-size:52px;
+    font-size:3.25rem;
   }
 }
 
@@ -69,25 +69,25 @@
 
 .heading {
   font-weight: 500;
-  font-size: 18px;
-  line-height: 23px;
+  font-size: 1.125rem;
+  line-height: 1.4375rem;
   font-family: "Outfit";
   background:transparent; 
   @include tablet {
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
   }
 }
 
 .body-copy {
   font-weight: 500;
-  font-size: 12px;
-  line-height: 15px;
+  font-size: 0.75rem;
+  line-height:0.9375rem;
   font-family: "Outfit";
   background-color:transparent; 
   @include tablet {
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 1.25rem;
+    line-height: 1.625rem;
   }
 }
 
@@ -98,23 +98,23 @@
 
 .small-body-copy {
   font-weight: 500;
-  font-size: 10px;
-  line-height: 12px;
+  font-size: 0.625rem;
+  line-height: 0.75rem;
   font-family: "Outfit";
   @include tablet {
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.75rem;
+    line-height:0.9375rem;
   }
 }
 
 .label {
   font-weight: 500;
-  font-size: 12px;
-  line-height: 15px;
+  font-size: 0.75rem;
+  line-height:0.9375rem;
   font-family: "Outfit";
   background-color:transparent; 
   @include tablet {
-    font-size: 14px;
-    line-height: 17.5px;
+    font-size: 0.875rem;
+    line-height: 1.0938rem;
   }
 }

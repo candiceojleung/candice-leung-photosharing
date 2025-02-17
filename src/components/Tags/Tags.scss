@@ -1,9 +1,9 @@
 @use "../../styles/partials/mixins" as*;
 
 .tag{
-    padding: 6px 8px; 
-    border-radius: 6px; 
-    border: 1px solid $primary-accent; 
+    padding: 0.375rem 0.5rem; 
+    border-radius: 0.375rem; 
+    border: 0.0625rem solid $primary-accent; 
     color:$primary-accent; 
     background-color:$secondary-text;
 
@@ -13,7 +13,7 @@
         cursor:pointer;
     }
     @include tablet{
-        padding: 8px 12px; 
-        border-radius: 12px; 
+        padding: 0.5rem 0.75rem; 
+        border-radius: 0.75rem; 
     }
 }
