@@ -1,29 +1,29 @@
 @use "./styles/partials/global" as *;
 @use "./styles/partials/mixins" as *;
 
-.desktop {
+.desktop-screen {
   @include desktop {
     display: flex;
   }
 
   &.drawer-open {
     @include desktop {
-      .desktop__left {
-        width: 70%;
+      .desktop-screen__left {
+        width: 65%;
       }
 
-      .desktop__right {
-        width: 30%;
+      .desktop-screen__right {
+        width: 35%;
       }
     }
   }
 
   &.drawer-closed {
     @include desktop {
-      .desktop__left {
+      .desktop-screen__left {
         width: 100%;
       }
-      .desktop__right {
+      .desktop-screen__right {
         display: none;
       }
     }

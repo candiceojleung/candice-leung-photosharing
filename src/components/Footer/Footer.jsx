@@ -43,8 +43,8 @@ function Footer() {
 
   return (
     <div className="footer">
-      <div className="footer__desktop">
-        <div className="footer__tablet">
+      <div className="footer__desktop-container">
+        <div className="footer__tablet-container">
            <Wordmark > <p className="footer__title">Snaps</p></Wordmark>
           <BodyCopy>
             <div className="footer__learnmore">

@@ -40,7 +40,6 @@ li {
     }
 
     @include desktop {
-      flex-direction: row;
       padding: 0 80px 48px;
     }
   }
@@ -71,7 +70,7 @@ li {
     }
   }
   
-  &__tablet {
+  &__tablet-container {
     @include tablet {
       display: flex;
       justify-content: space-between;
@@ -82,7 +81,7 @@ li {
     }
   }
  
-  &__desktop{
+  &__desktop-container{
     @include desktop{
         display:flex; 
         justify-content:space-between;

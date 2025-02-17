@@ -13,7 +13,7 @@ function PhotoCard({ url, alt, photographer, tags }) {
       <SmallBodyCopy>
         <div className="photo__tags">
           {tags.map((tag, index) => (
-            <p key={index} className="photo_tag">
+            <p key={index} className="photo__tag">
               {tag}
             </p>
           ))}

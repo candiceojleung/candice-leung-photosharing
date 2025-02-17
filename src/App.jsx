@@ -22,16 +22,16 @@ function App() {
     <>
       <Header toggleDrawer={toggleDrawer} isDrawerOpen={isDrawerOpen} />
       <div
-        className={`desktop ${isDrawerOpen ? "drawer-open" : "drawer-closed"}`}
+        className={`desktop-screen  ${isDrawerOpen ? "drawer-open" : "drawer-closed"}`}
       >
-        <div className="desktop__right">
+        <div className="desktop-screen__right">
           <FilterDrawer
             selectedFilter={selectedFilter}
             setSelectedFilter={selectedTag}
             isDrawerOpen={isDrawerOpen}
           />
         </div>
-        <div className="desktop__left">
+        <div className="desktop-screen__left">
           <Hero />
           <PhotoCardList
             selectedFilter={selectedFilter}

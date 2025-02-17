@@ -14,9 +14,9 @@
     gap: 24px;
   }
 
-  @include desktop {
-    padding: 80px 24px;
-  }
+@include desktop{
+  padding-top:80px;
+}
 
   @include desktop {
     .photo {
@@ -26,6 +26,7 @@
 
   &.drawer-open {
     @include desktop {
+      padding-top: 64px; 
       .photo {
         width: calc(50% - 12px);
       }
