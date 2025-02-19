@@ -9,33 +9,26 @@ import PhotoPageHeader from "../../components/PhotoPageHeader/PhotoPageHeader";
 
 export default function PhotoPage() {
   const { id } = useParams();
-
   const [photo, setPhoto] = useState(null);
-  const [comments, setComments] = useState(null);
 
   useEffect(() => {
     fetchPhoto();
   }, []);
 
-  useEffect(() => {
-    fetchComments();
-  }, []);
 
   async function fetchPhoto() {
-    const { data } = await axios.get(
-      `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}?api_key=0b7ea1c0-7c37-4087-bfb3-dd00663da892`
-    );
-    setPhoto(data);
+    try {
+      const { data } = await axios.get(
+        `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}?api_key=0b7ea1c0-7c37-4087-bfb3-dd00663da892`
+      );
+      setPhoto(data);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
-  async function fetchComments() {
-    const { data } = await axios.get(
-      `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}/comments?api_key=0b7ea1c0-7c37-4087-bfb3-dd00663da892`
-    );
-    setComments(data);
-  }
 
-  if (!photo || !comments) {
+  if (!photo) {
     return <div>loading...</div>;
   }
 
@@ -44,7 +37,7 @@ export default function PhotoPage() {
       <PhotoPageHeader />
       <PhotoPageImage />
       <PhotoPageForm />
-      <CommentList />
+      <CommentList id={id} />
       <Footer />
     </>
   );
