@@ -9,28 +9,6 @@ import PhotoPageHeader from "../../components/PhotoPageHeader/PhotoPageHeader";
 
 export default function PhotoPage() {
   const { id } = useParams();
-  const [photo, setPhoto] = useState(null);
-
-  useEffect(() => {
-    fetchPhoto();
-  }, []);
-
-
-  async function fetchPhoto() {
-    try {
-      const { data } = await axios.get(
-        `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}?api_key=0b7ea1c0-7c37-4087-bfb3-dd00663da892`
-      );
-      setPhoto(data);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-
-  if (!photo) {
-    return <div>loading...</div>;
-  }
 
   return (
     <>

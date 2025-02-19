@@ -1,8 +1,30 @@
 import "./PhotoCardList.scss";
-import photos from "../../data/photos.json";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import PhotoCard from "../PhotoCard/PhotoCard";
 
 function PhotoCardList({ selectedFilter, isDrawerOpen }) {
+  const [photos, setPhotos] = useState(null);
+
+  useEffect(() => {
+    fetchPhotos();
+  }, []);
+
+  async function fetchPhotos() {
+    try {
+    const { data } = await axios.get(
+      " https://unit-3-project-c5faaab51857.herokuapp.com/photos?api_key=0b7ea1c0-7c37-4087-bfb3-dd00663da892"
+    );
+    setPhotos(data);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+  if (!photos) {
+    return <div>Loading...</div>;
+  }
+
   const filteredPhotos = selectedFilter
     ? photos.filter((photo) => photo.tags.includes(selectedFilter))
     : photos;
