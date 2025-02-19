@@ -6,7 +6,7 @@ import { Heading, Label } from "../Typography/Typography";
 function FilterDrawer({ selectedFilter, setSelectedFilter, isDrawerOpen }) {
   if (!isDrawerOpen) return null;
   return (
-    <div className="filter-drawer">
+    <section className="filter-drawer">
       <Heading>
         <p className="filter-drawer__header">Filters</p>
       </Heading>
@@ -23,7 +23,7 @@ function FilterDrawer({ selectedFilter, setSelectedFilter, isDrawerOpen }) {
           ))}
         </div>
       </Label>
-    </div>
+    </section>
   );
 }
 

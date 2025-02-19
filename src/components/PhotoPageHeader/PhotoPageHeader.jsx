@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function PhotoPageHeader() {
   return (
-    <div className="photopage-header">
+    <header className="photopage-header">
       <Link to={`/`}>
         <Wordmark>Snaps</Wordmark>
       </Link>
@@ -21,7 +21,7 @@ function PhotoPageHeader() {
           </Heading>
         </div>
       </Link>
-    </div>
+    </header>
   );
 }
 

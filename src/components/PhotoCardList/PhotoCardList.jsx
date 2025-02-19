@@ -12,14 +12,14 @@ function PhotoCardList({ selectedFilter, isDrawerOpen }) {
 
   async function fetchPhotos() {
     try {
-    const { data } = await axios.get(
-      " https://unit-3-project-c5faaab51857.herokuapp.com/photos?api_key=0b7ea1c0-7c37-4087-bfb3-dd00663da892"
-    );
-    setPhotos(data);
-  } catch (error) {
-    console.log(error);
+      const { data } = await axios.get(
+        " https://unit-3-project-c5faaab51857.herokuapp.com/photos?api_key=0b7ea1c0-7c37-4087-bfb3-dd00663da892"
+      );
+      setPhotos(data);
+    } catch (error) {
+      console.log(error);
+    }
   }
-}
 
   if (!photos) {
     return <div>Loading...</div>;

@@ -1,18 +1,18 @@
 @use "../../styles/partials/global" as *;
 @use "../../styles/partials/mixins" as *;
 
-.desktop-screen {
+.main-screen {
   @include desktop {
     display: flex;
   }
 
   &.drawer-open {
     @include desktop {
-      .desktop-screen__left {
+      .main-screen__left {
         width: 65%;
       }
 
-      .desktop-screen__right {
+      .main-screen__right {
         width: 35%;
       }
     }
@@ -20,10 +20,10 @@
 
   &.drawer-closed {
     @include desktop {
-      .desktop-screen__left {
+      .main__left {
         width: 100%;
       }
-      .desktop-screen__right {
+      .main__right {
         display: none;
       }
     }

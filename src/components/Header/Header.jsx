@@ -5,14 +5,14 @@ import {Link} from "react-router-dom";
 
 function Header({ toggleDrawer, isDrawerOpen }) {
   return (
-    <div className="header">
+    <header className="header">
       <Link to={`/`}>
         <Wordmark>Snaps</Wordmark>
       </Link>
       <div className="header__button">
         <FilterButton onClick={toggleDrawer} isDrawerOpen={isDrawerOpen} />
       </div>
-    </div>
+    </header>
   );
 }
 

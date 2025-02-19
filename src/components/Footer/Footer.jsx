@@ -42,11 +42,10 @@ function Footer() {
   const footerInfo = ["© 2024 Snaps", ". Terms", "Privacy", "Cookies"];
 
   return (
-    <div className="footer">
+    <section className="footer">
       <div className="footer__desktop-container">
         <div className="footer__tablet-container">
           <Wordmark>
-            {" "}
             <p className="footer__title">Snaps</p>
           </Wordmark>
           <BodyCopy>
@@ -78,7 +77,7 @@ function Footer() {
           ))}
         </div>
       </Label>
-    </div>
+    </section>
   );
 }
 

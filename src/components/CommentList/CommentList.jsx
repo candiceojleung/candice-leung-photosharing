@@ -27,7 +27,7 @@ function CommentList({ id }) {
   console.log(comments);
 
   return (
-    <div className="comment-list">
+    <section className="comment-list">
       {comments.map((comment) => {
         return(
         <Comment
@@ -37,7 +37,7 @@ function CommentList({ id }) {
           comment={comment.comment}
         />);
       })}
-    </div>
+    </section>
   );
 }
 

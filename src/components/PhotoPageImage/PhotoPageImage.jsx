@@ -26,7 +26,7 @@ function PhotoPageImage() {
     return <div>loading...</div>;
   }
   return (
-    <div className="photopage__photo">
+    <section className="photopage__photo">
       <img
         src={photo.photo}
         alt={photo.photoDescription}
@@ -34,14 +34,13 @@ function PhotoPageImage() {
       />
       <div className="photopage__info">
         <div className="photopage__tags">
-          {photo.tags.map((tag,index) => (
+          {photo.tags.map((tag,index) =>(
             <span key={index} className="photopage__tag">
               {tag}
             </span>
           ))}
         </div>
         <p>
-          {" "}
           <img
             src="../src/assets/images/Like_Outline.svg"
             alt="like-icon"
@@ -51,7 +50,7 @@ function PhotoPageImage() {
         <p>Photo by {photo.photographer}</p>
         <p>{new Date(photo.timestamp).toLocaleDateString()}</p>
       </div>
-    </div>
+    </section>
   );
 }
 
