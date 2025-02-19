@@ -1,7 +1,6 @@
 import "./Comment.scss";
 
-function Comment(name,time,comment) {
-    console.log(name);
+function Comment({name,time,comment}) {
   return (
     <div className="comment__container">
       <div className="comment__item">
