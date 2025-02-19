@@ -12,6 +12,7 @@ function PhotoCardList({ selectedFilter, isDrawerOpen }) {
       {filteredPhotos.map((photo) => (
         <PhotoCard
           key={photo.id}
+          id={photo.id}
           url={photo.photo}
           alt={photo.photoDescription}
           photographer={photo.photographer}
