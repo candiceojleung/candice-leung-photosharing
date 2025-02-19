@@ -1,4 +1,7 @@
 import "./App.scss";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "../src/pages/HomePage/HomePage";
+import PhotoPage from "../src/pages/PhotoPage/PhotoPage"
 import { useState } from "react";
 import FilterDrawer from "./components/FilterDrawer/FilterDrawer";
 import Footer from "./components/Footer/Footer";
