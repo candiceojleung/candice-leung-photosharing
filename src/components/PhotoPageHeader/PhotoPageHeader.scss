@@ -1,0 +1,28 @@
+@use "../../styles/partials/mixins" as *; 
+
+.photopage-header {
+    color: $primary-text;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 1.5rem 1rem;
+    width: 100%;
+  
+    @include tablet {
+      padding: 2rem 1.5rem;
+    }
+
+    &__home{
+        color: $primary-accent; 
+        display:flex; 
+        justify-content:center; 
+        align-items:center; 
+        gap: 0.5rem; 
+
+
+    }
+  }
