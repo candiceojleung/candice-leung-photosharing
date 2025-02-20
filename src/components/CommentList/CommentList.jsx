@@ -3,24 +3,7 @@ import Comment from "../Comment/Comment";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-function CommentList({ id }) {
-  const [comments, setComments] = useState(null);
-  useEffect(() => {
-    fetchComments();
-  }, []);
-
- 
-  async function fetchComments() {
-    try {
-      const { data } = await axios.get(
-        `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}/comments?api_key=0b7ea1c0-7c37-4087-bfb3-dd00663da892`
-      );
-      setComments(data);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
+function CommentList({ comments }) {
   if (!comments) {
     return <div>loading...</div>;
   }
@@ -33,7 +16,7 @@ function CommentList({ id }) {
         <Comment
           key={comment.id}
           name={comment.name}
-          time={new Date(comment.timestamp).toLocaleTimeString()}
+          time={new Date(comment.timestamp).toLocaleDateString()}
           comment={comment.comment}
         />);
       })}
