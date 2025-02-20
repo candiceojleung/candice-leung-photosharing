@@ -1,7 +1,6 @@
 import "./CommentList.scss";
 import Comment from "../Comment/Comment";
-import axios from "axios";
-import { useEffect, useState } from "react";
+
 
 function CommentList({ comments }) {
   if (!comments) {
