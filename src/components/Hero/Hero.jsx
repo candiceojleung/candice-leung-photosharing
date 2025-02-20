@@ -12,7 +12,7 @@ function Hero() {
           Provide photographers a space to share photos of the neighborhoods
           they cherish,
           <Title italic>
-            <span>expressed in their unique style.</span>
+            <span> expressed in their unique style.</span>
           </Title>
         </Title>
       </p>

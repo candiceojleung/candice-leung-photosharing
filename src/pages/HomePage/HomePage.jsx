@@ -1,9 +1,10 @@
+import "./HomePage.scss"
 import FilterDrawer from "../../components/FilterDrawer/FilterDrawer"
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import Hero from "../../components/Hero/Hero";
 import PhotoCardList from "../../components/PhotoCardList/PhotoCardList";
-import { useState} from "react";
+import {useState} from "react";
 
 export default function HomePage() {
 
@@ -22,16 +23,16 @@ export default function HomePage() {
         <>
           <Header toggleDrawer={toggleDrawer} isDrawerOpen={isDrawerOpen} />
           <div
-            className={`main-screen ${isDrawerOpen?"drawer-open":"drawer-closed"}`}
+            className={`main ${isDrawerOpen?"drawer-open":"drawer-closed"}`}
           >
-            <div className="main-screen__right">
+            <div className="main__right">
               <FilterDrawer
                 selectedFilter={selectedFilter}
                 setSelectedFilter={selectedTag}
                 isDrawerOpen={isDrawerOpen}
               />
             </div>
-            <div className="main-screen__left">
+            <div className="main__left">
               <Hero />
               <PhotoCardList
                 selectedFilter={selectedFilter}
