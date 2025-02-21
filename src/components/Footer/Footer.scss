@@ -1,12 +1,6 @@
 @use "../../styles/partials/mixins" as *;
 
-a {
-  text-decoration: none;
-  color: $primary-text;
-}
-li {
-  list-style: none;
-}
+
 
 .footer {
   padding: 0 1rem 1.5rem;
