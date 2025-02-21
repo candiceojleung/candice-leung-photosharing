@@ -1,6 +1,7 @@
 import "./PhotoPageForm.scss";
 import { useState } from "react";
 import axios from "axios";
+import { BodyCopy } from "../Typography/Typography";
 
 function PhotoPageForm({ id, fetchComments }) {
   const BASE_URL = "https://unit-3-project-c5faaab51857.herokuapp.com";
@@ -44,9 +45,12 @@ function PhotoPageForm({ id, fetchComments }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="form" onSubmit={handleSubmit}>
+      <div className="form__info">
       <label>
-        Name:{" "}
+        <p className="form__label">
+          <BodyCopy>Name</BodyCopy>{" "}
+        </p>
         <input
           type="text"
           name="name"
@@ -57,9 +61,11 @@ function PhotoPageForm({ id, fetchComments }) {
           }`}
         />
       </label>
-      <label>
-        Comment:{" "}
-        <input
+      <label className="form__label">
+        <p className="form__label">
+          <BodyCopy>Comment</BodyCopy>
+        </p>
+        <textarea
           type="text"
           name="comment"
           onChange={handleComment}
@@ -69,13 +75,16 @@ function PhotoPageForm({ id, fetchComments }) {
           }`}
         />
       </label>
-      <button
-        className="form__button"
-        type="submit"
-        disabled={!isFieldFilled()}
-      >
-        Submit
-      </button>
+      </div>
+      <div className="form__submit">
+        <button
+          className="form__button"
+          type="submit"
+          disabled={!isFieldFilled()}
+        >
+          <BodyCopy>Submit</BodyCopy>
+        </button>
+      </div>
     </form>
   );
 }
