@@ -1,15 +1,13 @@
 @use "../../styles/partials/mixins" as *;
 
-
 .form {
-    margin-bottom: 24px; 
+  margin-bottom: 24px;
 
-  &__info{
+  &__info {
     display: flex;
     flex-direction: column;
-    align-items:center; 
-    padding-top:48px;
-
+    align-items: center;
+    padding-top: 48px;
   }
 
   &__label {
@@ -19,11 +17,11 @@
   &__name,
   &__comment {
     border-style: none;
-    border: 0.0625rem solid $secondary-border;
+    border:2px solid $secondary-border;
     border-radius: 0.25rem;
     margin-bottom: 1rem;
-    width: 280px;
-    max-width: 100%;
+    min-width: 280px; 
+    padding: 8px; 
 
     @include tablet {
       padding: 8px 16px;
@@ -31,41 +29,40 @@
 
     &:focus {
       outline: none;
-      border: 0.0625rem solid $primary-accent;
+      border:2px solid $primary-accent;
     }
   }
 
   &__name {
-    height: 30px;
+    min-height: 30px;
 
     @include tablet {
-      height: 40px;
+      min-height: 40px;
     }
   }
 
   &__comment {
-    resize:none; 
+    resize: none;
     height: 5rem;
   }
 
-  &__submit{
-    display:flex; 
-    justify-content:flex-end;
-    width:100%; 
+  &__submit {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
   }
 
   &__button {
-    all:unset; 
-    display:flex; 
-    justify-content:center; 
-    align-items:center; 
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 0.375rem;
-    background:$primary-accent; 
-    color:$secondary-text; 
-    padding:6px 8px; 
-    @include tablet{
-        padding: 8px 12px; 
+    background: $primary-accent;
+    color: $secondary-text;
+    padding: 6px 8px;
+    @include tablet {
+      padding: 8px 12px;
     }
   }
-
 }
