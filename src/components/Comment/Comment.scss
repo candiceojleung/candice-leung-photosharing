@@ -1,33 +1,32 @@
-@use "../../styles/partials/mixins" as*; 
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 
-.comment {    
-    margin-bottom: 1rem;
-  
-    &__image {
-      background-color: $primary-background;
-    }
-  
-    &__container {
-      flex-direction: column;
-      flex: 1;
-      border-top: 1px solid $secondary-border; 
-      padding: 16px 0; 
-    }
-  
-    &__item {
-      display:flex;
-      justify-content:space-between;
-      padding-bottom: 1rem; 
-    }
-  
-    &__name , &__date {
-      color: $primary-accent;
-    }
+.comment {
+  margin-bottom: 1rem;
 
+  &__image {
+    background-color: $primary-background;
+  }
 
+  &__container {
+    flex-direction: column;
+    flex: 1;
+    border-top: 1px solid $secondary-border;
+    padding: 16px 0;
+  }
 
-    &__text{
-        color: $primary-text;
-    }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+  }
 
+  &__name,
+  &__date {
+    color: $primary-accent;
+  }
+
+  &__text {
+    color: $primary-text;
+  }
 }
