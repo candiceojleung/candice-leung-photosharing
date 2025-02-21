@@ -1,10 +1,15 @@
 @use "../../styles/partials/mixins" as*; 
 
+
 .secondary-page{
     color: $primary-text;
     margin: 24px 16px 0; 
 
     @include tablet{
         margin: 0 24px; 
+    }
+
+    @include desktop{
+        margin: 0 240px; 
     }
 }
