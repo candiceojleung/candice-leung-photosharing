@@ -13,3 +13,13 @@ html {
   overflow-y: auto;
   height: 100%;
 }
+
+a {
+  text-decoration: none;
+  color: $primary-text;
+  background-color: transparent;
+}
+
+li {
+  list-style: none;
+}
