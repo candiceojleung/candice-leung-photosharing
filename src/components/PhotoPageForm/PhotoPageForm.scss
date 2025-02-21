@@ -6,8 +6,10 @@
   &__info {
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding-top: 48px;
+    max-width:100%; 
+
+
   }
 
   &__label {
@@ -17,11 +19,16 @@
   &__name,
   &__comment {
     border-style: none;
-    border:2px solid $secondary-border;
-    border-radius: 0.25rem;
+    border: 2px solid $secondary-border;
+    border-radius: 8px; 
     margin-bottom: 1rem;
-    min-width: 280px; 
-    padding: 8px; 
+    min-width: 280px;
+    max-width:100%; 
+    width:100%;
+    padding: 8px;
+    &--invalid{
+      border: 2px solid #B10606;
+    }
 
     @include tablet {
       padding: 8px 16px;
@@ -29,7 +36,7 @@
 
     &:focus {
       outline: none;
-      border:2px solid $primary-accent;
+      border: 2px solid $primary-accent;
     }
   }
 
@@ -44,6 +51,7 @@
   &__comment {
     resize: none;
     height: 5rem;
+
   }
 
   &__submit {

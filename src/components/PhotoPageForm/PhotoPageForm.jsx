@@ -9,6 +9,7 @@ function PhotoPageForm({ id, fetchComments }) {
   const URL = `${BASE_URL}/photos/${id}/comments?api_key=${API_KEY}`;
   const [name, setName] = useState("");
   const [comment, setComment] = useState("");
+  const [submit, setSubmit] = useState(false);
 
   const handleName = (event) => {
     setName(event.target.value);
@@ -17,18 +18,14 @@ function PhotoPageForm({ id, fetchComments }) {
     setComment(event.target.value);
   };
 
-  const isFieldFilled = () => {
-    if (!name || !comment) {
-      return false;
-    }
-    return true;
-  };
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (isFieldFilled()) {
-      postComment();
+    setSubmit(true);
+
+    if (name.trim() === "" || comment.trim() === "") {
+      return; // Prevent form submission if fields are empty
     }
+    postComment();
   };
 
   async function postComment() {
@@ -38,6 +35,7 @@ function PhotoPageForm({ id, fetchComments }) {
       fetchComments();
       setName("");
       setComment("");
+      setSubmit(false);
       return response;
     } catch (error) {
       console.log(error);
@@ -47,40 +45,41 @@ function PhotoPageForm({ id, fetchComments }) {
   return (
     <form className="form" onSubmit={handleSubmit}>
       <div className="form__info">
-      <label>
-        <p className="form__label">
-          <BodyCopy>Name</BodyCopy>{" "}
-        </p>
-        <input
-          type="text"
-          name="name"
-          onChange={handleName}
-          value={name}
-          className={`form__name ${
-            isFieldFilled() ? "" : "form__name--invalid"
-          }`}
-        />
-      </label>
-      <label className="form__label">
-        <p className="form__label">
-          <BodyCopy>Comment</BodyCopy>
-        </p>
-        <textarea
-          type="text"
-          name="comment"
-          onChange={handleComment}
-          value={comment}
-          className={`form__comment ${
-            isFieldFilled() ? "" : "form__comment--invalid"
-          }`}
-        />
-      </label>
+        <label>
+          <p className="form__label">
+            <BodyCopy>Name</BodyCopy>{" "}
+          </p>
+          <input
+            type="text"
+            name="name"
+            onChange={handleName}
+            value={name}
+            className={`form__name ${
+              submit && name.trim("") === "" ? "form__name--invalid" : ""
+            }`}
+          />
+        </label>
+        <label className="form__label">
+          <p className="form__label">
+            <BodyCopy>Comment</BodyCopy>
+          </p>
+          <textarea
+            type="text"
+            name="comment"
+            onChange={handleComment}
+            value={comment}
+            className={`form__comment ${
+              submit && comment.trim("") === ""
+                ? "form__comment--invalid"
+                : ""
+            }`}
+          />
+        </label>
       </div>
       <div className="form__submit">
         <button
           className="form__button"
           type="submit"
-          disabled={!isFieldFilled()}
         >
           <BodyCopy>Submit</BodyCopy>
         </button>
