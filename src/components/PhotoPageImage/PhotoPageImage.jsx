@@ -2,6 +2,7 @@ import "./PhotoPageImage.scss";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { BodyCopy } from "../Typography/Typography";
 
 function PhotoPageImage() {
   const { id } = useParams();
@@ -26,40 +27,50 @@ function PhotoPageImage() {
     return <div>loading...</div>;
   }
 
-  const options ={
-   year:"numeric",
-   month:"2-digit",
-   day:"2-digit"
+  const options = {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
   };
-  const formattedDate = new Date(photo.timestamp).toLocaleDateString("en-US", options)
-    
+  const formattedDate = new Date(photo.timestamp).toLocaleDateString(
+    "en-US",
+    options
+  );
+
   return (
-    <section className="photopage__photo">
-      <img
-        src={photo.photo}
-        alt={photo.photoDescription}
-        className="photopage__image"
-      />
-      <div className="photopage__info">
-        <div className="photopage__tags">
-          {photo.tags.map((tag,index) =>(
-            <span key={index} className="photopage__tag">
-              {tag}
-            </span>
-          ))}
+    <BodyCopy>
+      {" "}
+      <section className="photopage__photo">
+        <img
+          src={photo.photo}
+          alt={photo.photoDescription}
+          className="photopage__image"
+        />
+        <div className="photopage__info">
+          <div className="photopage__tags">
+            {photo.tags.map((tag, index) => (
+              <span key={index} className="photopage__tag">
+                {tag}
+              </span>
+            ))}
+          </div>
+          <div className="photopage__container">
+            <div className="photopage__wrapper">
+              <p className="photopage__like">
+                <img
+                  src="../src/assets/images/Like_Outline.svg"
+                  alt="like-icon"
+                  className="photopage__icon"
+                ></img>
+                {photo.likes} likes
+              </p>
+              <p className="photopage__author">Photo by {photo.photographer}</p>
+            </div>
+            <p className="photopage__date">{formattedDate}</p>
+          </div>
         </div>
-        <p className= "photopage__like">
-          <img
-            src="../src/assets/images/Like_Outline.svg"
-            alt="like-icon"
-            className="photopage__icon"
-          ></img>
-          {photo.likes} likes
-        </p>
-        <p className="photopage__author">Photo by {photo.photographer}</p>
-        <p className="photopage__date">{formattedDate}</p>
-      </div>
-    </section>
+      </section>
+    </BodyCopy>
   );
 }
 

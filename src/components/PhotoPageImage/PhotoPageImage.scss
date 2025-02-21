@@ -1,0 +1,64 @@
+@use "../../styles/partials/mixins" as *;
+
+.photopage {
+
+    &__container, &__author, &__like , &__date, &__info , &__tags{
+        background-color: $secondary-background;
+    }
+
+  &__photo {
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 0.0625rem solid $secondary-border;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: $primary-text;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding-top: 16px; 
+
+    @include tablet {
+      gap: calc(30% - 12px);
+    }
+  }
+  &__wrapper { 
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items:center; 
+      flex: 1;
+    }
+}
+
+&__like{
+    padding-bottom: 8px; 
+}
+&__info{
+    padding: 16px; 
+
+}
+
+  &__tags {
+    display: flex;
+    gap: 0.5rem;
+
+    @include tablet {
+      padding: 1rem;
+      gap: 24px; 
+    }
+  }
+  &__tag {
+    background-color: $secondary-text;
+    border: 0.0625rem solid $secondary-border;
+    padding: 0.375rem 0.5rem;
+    border-radius: 0.375rem;
+    @include tablet {
+      border-radius: 0.75rem;
+      padding: 0.5rem 0.75rem;
+    }
+  }
+}
