@@ -6,7 +6,7 @@ function PhotoCard({ url, alt, photographer, tags, id }) {
   return (
     <section className="photo">
       <div className="photo__content">
-        <Link to={`/photo/${id}`}>
+        <Link to={`/photo/${id}`} className="photo__link">
           <img className="photo__image" src={url} alt={alt} />
         </Link>
         <SmallBodyCopy>
