@@ -25,6 +25,14 @@ function PhotoPageImage() {
   if (!photo) {
     return <div>loading...</div>;
   }
+
+  const options ={
+   year:"numeric",
+   month:"2-digit",
+   day:"2-digit"
+  };
+  const formattedDate = new Date(photo.timestamp).toLocaleDateString("en-US", options)
+    
   return (
     <section className="photopage__photo">
       <img
@@ -40,15 +48,16 @@ function PhotoPageImage() {
             </span>
           ))}
         </div>
-        <p>
+        <p className= "photopage__like">
           <img
             src="../src/assets/images/Like_Outline.svg"
             alt="like-icon"
+            className="photopage__icon"
           ></img>
           {photo.likes} likes
         </p>
-        <p>Photo by {photo.photographer}</p>
-        <p>{new Date(photo.timestamp).toLocaleDateString()}</p>
+        <p className="photopage__author">Photo by {photo.photographer}</p>
+        <p className="photopage__date">{formattedDate}</p>
       </div>
     </section>
   );
