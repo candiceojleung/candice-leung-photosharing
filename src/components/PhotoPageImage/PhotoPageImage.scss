@@ -1,28 +1,28 @@
 @use "../../styles/partials/mixins" as *;
 
 .photopage {
-
-    &__container, &__author, &__like , &__date, &__info , &__tags{
-        background-color: $secondary-background;
-    }
+  background-color: $secondary-background;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-top: 48px;
+  border: 0.0625rem solid $secondary-border;
 
   &__photo {
     width: 100%;
-    border-radius: 0.5rem;
-    border: 0.0625rem solid $secondary-border;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
     color: $primary-text;
   }
+
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: start;
-    padding-top: 16px; 
+    padding-top:16px;
 
     @include tablet {
       gap: calc(30% - 12px);
+      padding: 16px 16px 0; 
     }
   }
   &__wrapper { 
@@ -35,6 +35,8 @@
 }
 
 &__like{
+  display:flex; 
+    gap:4px; 
     padding-bottom: 8px; 
 }
 &__info{
@@ -45,6 +47,7 @@
   &__tags {
     display: flex;
     gap: 0.5rem;
+  
 
     @include tablet {
       padding: 1rem;

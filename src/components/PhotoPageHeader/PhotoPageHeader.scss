@@ -1,6 +1,8 @@
 @use "../../styles/partials/mixins" as *; 
 
 .photopage-header {
+  background-color: $primary-background;
+
     color: $primary-text;
     display: flex;
     justify-content: space-between;

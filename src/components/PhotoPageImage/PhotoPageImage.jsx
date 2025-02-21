@@ -38,14 +38,14 @@ function PhotoPageImage() {
   );
 
   return (
-    <BodyCopy>
-      {" "}
-      <section className="photopage__photo">
+
+      <section className="photopage">
         <img
           src={photo.photo}
           alt={photo.photoDescription}
-          className="photopage__image"
+          className="photopage__photo"
         />
+        <BodyCopy>
         <div className="photopage__info">
           <div className="photopage__tags">
             {photo.tags.map((tag, index) => (
@@ -69,8 +69,8 @@ function PhotoPageImage() {
             <p className="photopage__date">{formattedDate}</p>
           </div>
         </div>
+        </BodyCopy>
       </section>
-    </BodyCopy>
   );
 }
 
