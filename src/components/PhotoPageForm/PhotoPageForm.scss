@@ -27,6 +27,7 @@
 
     @include tablet {
       padding: 8px 16px;
+      border-radius:12px; 
     }
 
     &:focus {
@@ -64,6 +65,7 @@
     padding: 6px 12px;
     @include tablet {
       padding: 8px 24px;
+      border-radius:12px;
     }
   }
 }
