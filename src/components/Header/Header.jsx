@@ -1,7 +1,7 @@
 import FilterButton from "../FilterButton/FilterButton";
 import "./Header.scss";
 import { Wordmark } from "../Typography/Typography";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Header({ toggleDrawer, isDrawerOpen }) {
   return (

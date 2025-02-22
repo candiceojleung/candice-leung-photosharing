@@ -1,13 +1,12 @@
 import "./FilterDrawer.scss";
 import axios from "axios";
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import Tags from "../Tags/Tags";
 import { Heading, Label } from "../Typography/Typography";
 
 function FilterDrawer({ selectedFilter, setSelectedFilter, isDrawerOpen }) {
-
   const [tags, setTags] = useState(null);
-  
+
   useEffect(() => {
     fetchTags();
   }, []);

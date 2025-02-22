@@ -69,18 +69,13 @@ function PhotoPageForm({ id, fetchComments }) {
             onChange={handleComment}
             value={comment}
             className={`form__comment ${
-              submit && comment.trim("") === ""
-                ? "form__comment--invalid"
-                : ""
+              submit && comment.trim("") === "" ? "form__comment--invalid" : ""
             }`}
           />
         </label>
       </div>
       <div className="form__submit">
-        <button
-          className="form__button"
-          type="submit"
-        >
+        <button className="form__button" type="submit">
           <BodyCopy>Submit</BodyCopy>
         </button>
       </div>

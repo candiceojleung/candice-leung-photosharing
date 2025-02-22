@@ -1,10 +1,9 @@
 import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "../src/pages/HomePage/HomePage";
-import PhotoPage from "../src/pages/PhotoPage/PhotoPage"
+import PhotoPage from "../src/pages/PhotoPage/PhotoPage";
 
 function App() {
- 
   return (
     <BrowserRouter>
       <Routes>

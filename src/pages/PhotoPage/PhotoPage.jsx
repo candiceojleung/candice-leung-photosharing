@@ -1,4 +1,4 @@
-import "./PhotoPage.scss"
+import "./PhotoPage.scss";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -35,9 +35,9 @@ export default function PhotoPage() {
     <>
       <PhotoPageHeader />
       <div className="secondary-page">
-      <PhotoPageImage />
-      <PhotoPageForm id={id} fetchComments={fetchComments} />
-      <CommentList comments={comments} />
+        <PhotoPageImage />
+        <PhotoPageForm id={id} fetchComments={fetchComments} />
+        <CommentList comments={comments} />
       </div>
       <Footer />
     </>

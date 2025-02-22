@@ -2,7 +2,6 @@ import "./Tags.scss";
 import { Label } from "../Typography/Typography";
 
 function Tags({ tag, isSelected, onClick }) {
-
   return (
     <figure
       className={`tag ${isSelected ? "tag--selected" : ""}`}

@@ -1,7 +1,6 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-
 .photo {
   width: 100%;
   border-radius: 0.5rem;
@@ -24,8 +23,8 @@
     display: flex;
   }
 
-  &__link{
-    display:flex; 
+  &__link {
+    display: flex;
   }
 
   &__image {

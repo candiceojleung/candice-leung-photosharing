@@ -29,7 +29,7 @@
     @include tablet {
       display: flex;
       align-items: center;
-      width:100%; 
+      width: 100%;
     }
   }
 
@@ -40,22 +40,22 @@
 
     @include tablet {
       padding-bottom: 0;
-      width:40%;
+      width: 40%;
     }
   }
 
-  &__author{
-    @include tablet{
-      width:60%; 
+  &__author {
+    @include tablet {
+      width: 60%;
     }
   }
 
   &__info {
     padding: 16px;
 
-  @include tablet{
-    padding-bottom: 24px;
-  }
+    @include tablet {
+      padding-bottom: 24px;
+    }
   }
 
   &__tags {

@@ -20,7 +20,9 @@ function CommentList({ comments }) {
   return (
     <section className="comment-list">
       <div className="comment-list__length">
-        <BodyCopy>{commentCount} {commentText} </BodyCopy>
+        <BodyCopy>
+          {commentCount} {commentText}{" "}
+        </BodyCopy>
       </div>
       {comments.map((comment) => {
         const formattedTime = new Date(comment.timestamp).toLocaleDateString(
