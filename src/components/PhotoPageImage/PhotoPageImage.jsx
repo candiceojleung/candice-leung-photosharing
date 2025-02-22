@@ -7,6 +7,9 @@ import { BodyCopy } from "../Typography/Typography";
 function PhotoPageImage() {
   const { id } = useParams();
   const [photo, setPhoto] = useState(null);
+  const BASE_URL = "https://unit-3-project-c5faaab51857.herokuapp.com";
+  const API_KEY = "0b7ea1c0-7c37-4087-bfb3-dd00663da892";
+  const url = `${BASE_URL}/photos/${id}?api_key=${API_KEY}`;
 
   useEffect(() => {
     fetchPhoto();
@@ -14,9 +17,7 @@ function PhotoPageImage() {
 
   async function fetchPhoto() {
     try {
-      const { data } = await axios.get(
-        `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}?api_key=0b7ea1c0-7c37-4087-bfb3-dd00663da892`
-      );
+      const { data } = await axios.get(url);
       setPhoto(data);
     } catch (error) {
       console.log(error);
@@ -38,14 +39,13 @@ function PhotoPageImage() {
   );
 
   return (
-
-      <section className="photopage">
-        <img
-          src={photo.photo}
-          alt={photo.photoDescription}
-          className="photopage__photo"
-        />
-        <BodyCopy>
+    <section className="photopage">
+      <img
+        src={photo.photo}
+        alt={photo.photoDescription}
+        className="photopage__photo"
+      />
+      <BodyCopy>
         <div className="photopage__info">
           <div className="photopage__tags">
             {photo.tags.map((tag, index) => (
@@ -69,8 +69,8 @@ function PhotoPageImage() {
             <p className="photopage__date">{formattedDate}</p>
           </div>
         </div>
-        </BodyCopy>
-      </section>
+      </BodyCopy>
+    </section>
   );
 }
 
