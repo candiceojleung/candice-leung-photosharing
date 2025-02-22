@@ -1,6 +1,8 @@
 import "./Footer.scss";
 import SocialMedia from "../SocialMedia/SocialMedia";
 import { Wordmark, BodyCopy, Label } from "../Typography/Typography";
+import { Link } from "react-router-dom";
+
 
 function Footer() {
   const learnMoreInfo = [
@@ -46,7 +48,7 @@ function Footer() {
       <div className="footer__desktop-container">
         <div className="footer__tablet-container">
           <Wordmark>
-            <p className="footer__title">Snaps</p>
+          <Link to={`/`}><p className="footer__title">Snaps</p></Link>
           </Wordmark>
           <BodyCopy>
             <div className="footer__learnmore">
