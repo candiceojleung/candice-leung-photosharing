@@ -3,7 +3,7 @@ import { Label } from "../Typography/Typography";
 
 function FilterButton({ onClick, isDrawerOpen }) {
   return (
-    <figure
+    <div
       className={`filter-button ${
         isDrawerOpen ? "filter-button--clicked" : ""
       }`}
@@ -15,7 +15,7 @@ function FilterButton({ onClick, isDrawerOpen }) {
         src="../src/assets/images/Filter.svg"
         alt="filter-icon"
       ></img>
-    </figure>
+    </div>
   );
 }
 

@@ -3,12 +3,12 @@ import { Label } from "../Typography/Typography";
 
 function Tags({ tag, isSelected, onClick }) {
   return (
-    <figure
+    <div
       className={`tag ${isSelected ? "tag--selected" : ""}`}
       onClick={onClick ? () => onClick(tag) : null}
     >
       <Label>{tag}</Label>
-    </figure>
+    </div>
   );
 }
 
