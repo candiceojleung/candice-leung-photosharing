@@ -12,13 +12,21 @@
     flex-direction: column;
     flex: 1;
     border-top: 1px solid $secondary-border;
-    padding: 16px 0;
+    padding: 8px 0; 
+    
+    @include tablet{
+      padding:10px 0; 
+    }
   }
 
   &__item {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 1rem;
+    padding-bottom:8px;
+
+    @include tablet{
+      padding-bottom: 10px; 
+    }
   }
 
   &__name,

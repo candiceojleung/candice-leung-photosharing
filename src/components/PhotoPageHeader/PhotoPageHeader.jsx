@@ -17,7 +17,7 @@ function PhotoPageHeader() {
             alt="arrow-icon"
           ></img>
           <Heading>
-            <p>Home</p>
+            <p className="photopage-header__text">Home</p>
           </Heading>
         </div>
       </Link>
