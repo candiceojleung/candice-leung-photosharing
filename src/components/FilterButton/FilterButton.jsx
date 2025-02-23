@@ -7,7 +7,7 @@ function FilterButton({ onClick, isDrawerOpen }) {
       className={`filter-button ${
         isDrawerOpen ? "filter-button--clicked" : ""
       }`}
-      onClick={onClick}
+      onClick={onClick}  //add modifier so that when button is clicked, there is different styling 
     >
       <Label>Filters</Label>
       <img

@@ -6,6 +6,9 @@ import { Heading, Label } from "../Typography/Typography";
 
 function FilterDrawer({ selectedFilter, setSelectedFilter, isDrawerOpen }) {
   const [tags, setTags] = useState(null);
+  const BASE_URL = "https://unit-3-project-c5faaab51857.herokuapp.com";
+  const API_KEY = "0b7ea1c0-7c37-4087-bfb3-dd00663da892";
+  const url = `${BASE_URL}/tags?api_key=${API_KEY}`;
 
   useEffect(() => {
     fetchTags();
@@ -13,8 +16,7 @@ function FilterDrawer({ selectedFilter, setSelectedFilter, isDrawerOpen }) {
 
   async function fetchTags() {
     try {
-      const { data } = await axios.get(
-        " https://unit-3-project-c5faaab51857.herokuapp.com/tags?api_key=0b7ea1c0-7c37-4087-bfb3-dd00663da892"
+      const { data } = await axios.get(url
       );
       setTags(data);
     } catch (error) {

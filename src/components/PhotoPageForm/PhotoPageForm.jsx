@@ -6,7 +6,7 @@ import { BodyCopy } from "../Typography/Typography";
 function PhotoPageForm({ id, fetchComments }) {
   const BASE_URL = "https://unit-3-project-c5faaab51857.herokuapp.com";
   const API_KEY = "0b7ea1c0-7c37-4087-bfb3-dd00663da892";
-  const URL = `${BASE_URL}/photos/${id}/comments?api_key=${API_KEY}`;
+  const URL = `${BASE_URL}/photos/${id}/comments?api_key=${API_KEY}`; //set up api key url 
   const [name, setName] = useState("");
   const [comment, setComment] = useState("");
   const [submit, setSubmit] = useState(false);
@@ -23,7 +23,7 @@ function PhotoPageForm({ id, fetchComments }) {
     setSubmit(true);
 
     if (name.trim() === "" || comment.trim() === "") {
-      return; // Prevent form submission if fields are empty
+      return; // Prevent form submission if fields are empty, ensuring not to count "spaces" 
     }
     postComment();
   };
@@ -32,11 +32,11 @@ function PhotoPageForm({ id, fetchComments }) {
     try {
       const commentObj = { name: name, comment: comment };
       const response = await axios.post(URL, commentObj);
-      fetchComments();
-      setName("");
-      setComment("");
-      setSubmit(false);
-      return response;
+      fetchComments();  //fetch comments again with new comment
+      setName(""); //reset name field 
+      setComment(""); //reset comment field 
+      setSubmit(false); //set submisison to default again 
+      return response; //show new comment 
     } catch (error) {
       console.log(error);
     }
@@ -56,7 +56,7 @@ function PhotoPageForm({ id, fetchComments }) {
             value={name}
             className={`form__name ${
               submit && name.trim("") === "" ? "form__name--invalid" : ""
-            }`}
+            }`} //create invalid modifier to add red border for form validation 
           />
         </label>
         <label className="form__label">
