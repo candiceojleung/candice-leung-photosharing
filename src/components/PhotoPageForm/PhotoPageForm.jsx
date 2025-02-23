@@ -47,7 +47,7 @@ function PhotoPageForm({ id, fetchComments }) {
       <div className="form__info">
         <label>
           <p className="form__label">
-            <BodyCopy>Name</BodyCopy>{" "}
+            <BodyCopy>Name</BodyCopy>
           </p>
           <input
             type="text"

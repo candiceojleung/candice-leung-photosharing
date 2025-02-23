@@ -1,6 +1,14 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
+input, textarea{
+  font-family:"Outfit";
+  font-size: 12px; 
+  font-weight: 500; 
+  @include tablet{
+    font-size: 20px; 
+  }
+}
 .form {
   margin-bottom: 24px;
 
@@ -29,10 +37,6 @@
     width: 100%;
     padding: 8px;
 
-    &--invalid {
-      border: 2px solid #b10606;
-    }
-
     @include tablet {
       border: 2px solid $secondary-border;
       padding: 8px 16px;
@@ -42,6 +46,10 @@
     &:focus {
       outline: none;
       border: 2px solid $primary-accent;
+    }
+
+    &--invalid {
+      border: 2px solid #b10606;
     }
   }
 
