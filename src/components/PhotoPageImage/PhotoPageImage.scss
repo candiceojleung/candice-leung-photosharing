@@ -6,7 +6,7 @@
   border-radius: 0.5rem;
   overflow: hidden;
   border: 1px solid $secondary-border;
-  @include tablet{
+  @include tablet {
     border: 2px solid $secondary-border;
   }
 
@@ -74,11 +74,11 @@
     border: 1px solid $secondary-border;
     padding: 0.375rem 0.5rem;
     border-radius: 8px;
-    font-size: 10px; 
+    font-size: 10px;
     @include tablet {
       border-radius: 0.75rem;
       padding: 0.5rem 16px;
-      font-size:20px; 
+      font-size: 20px;
       border: 2px solid $secondary-border;
     }
 

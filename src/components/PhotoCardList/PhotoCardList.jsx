@@ -31,7 +31,7 @@ function PhotoCardList({ selectedFilter, isDrawerOpen }) {
     : photos; //if selected filter matches the photo tag, then display that photo, else show all photos
 
   return (
-    <section className={`photocard-list ${isDrawerOpen ? "drawer-open" : " "}`}>   
+    <section className={`photocard-list ${isDrawerOpen ? "drawer-open" : " "}`}>
       {filteredPhotos.map((photo) => (
         <PhotoCard
           key={photo.id}
@@ -41,7 +41,7 @@ function PhotoCardList({ selectedFilter, isDrawerOpen }) {
           photographer={photo.photographer}
           tags={photo.tags}
           isDrawerOpen={isDrawerOpen}
-        /> 
+        />
       ))}
     </section>
   );

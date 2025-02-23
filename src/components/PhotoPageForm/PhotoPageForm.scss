@@ -1,12 +1,13 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-input, textarea{
-  font-family:"Outfit";
-  font-size: 12px; 
-  font-weight: 500; 
-  @include tablet{
-    font-size: 20px; 
+input,
+textarea {
+  font-family: "Outfit";
+  font-size: 12px;
+  font-weight: 500;
+  @include tablet {
+    font-size: 20px;
   }
 }
 .form {
@@ -18,12 +19,12 @@ input, textarea{
     padding-top: 36px;
     max-width: 100%;
 
-    @include tablet{
-      padding-top:48px; 
+    @include tablet {
+      padding-top: 48px;
     }
 
-    @include desktop{
-      padding-top:64px; 
+    @include desktop {
+      padding-top: 64px;
     }
   }
   &__name,
@@ -40,7 +41,7 @@ input, textarea{
     @include tablet {
       border: 2px solid $secondary-border;
       padding: 8px 16px;
-      border-radius:12px; 
+      border-radius: 12px;
     }
 
     &:focus {
@@ -82,7 +83,7 @@ input, textarea{
     padding: 6px 12px;
     @include tablet {
       padding: 8px 24px;
-      border-radius:12px;
+      border-radius: 12px;
     }
   }
 }

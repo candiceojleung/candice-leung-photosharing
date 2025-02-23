@@ -1,11 +1,11 @@
-@use "../../styles/partials/mixins" as *; 
+@use "../../styles/partials/mixins" as *;
 
 .comment-list {
   margin-bottom: 48px;
   &__length {
     padding-bottom: 8px;
-    @include tablet{
-      padding-bottom: 10px; 
+    @include tablet {
+      padding-bottom: 10px;
     }
   }
 }

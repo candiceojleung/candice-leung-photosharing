@@ -11,16 +11,16 @@ export default function HomePage() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const selectedTag = (tag) => {
-    setSelectedFilter(selectedFilter === tag ? null : tag); //if already selected, set to null, otherwise show selected tag 
+    setSelectedFilter(selectedFilter === tag ? null : tag); //if already selected, set to null, otherwise show selected tag
   };
 
   const toggleDrawer = () => {
-    setIsDrawerOpen((currentState) => !currentState); //triggers drawer state and flips current state back and forth 
+    setIsDrawerOpen((currentState) => !currentState); //triggers drawer state and flips current state back and forth
   };
 
   return (
     <>
-      <Header toggleDrawer={toggleDrawer} isDrawerOpen={isDrawerOpen} /> 
+      <Header toggleDrawer={toggleDrawer} isDrawerOpen={isDrawerOpen} />
       <div className={`main ${isDrawerOpen ? "drawer-open" : "drawer-closed"}`}>
         <div className="main__right">
           <FilterDrawer
