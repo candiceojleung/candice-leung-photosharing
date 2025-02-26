@@ -20,7 +20,10 @@ function PhotoPageForm({ id, fetchComments }) {
       event.preventDefault();
       setSubmit(true);
       if (name.trim() === "" || comment.trim() === "") {
-        return; // Prevent form submission if fields are empty, ensuring not to count "spaces"
+        setTimeout(() => {
+          alert("Name and comment are required and neither can be empty");
+        }, 2);
+        return;
       }
       postComment();
     } catch(error){
