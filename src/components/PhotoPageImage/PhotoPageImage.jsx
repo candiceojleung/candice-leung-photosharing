@@ -7,9 +7,7 @@ import { BodyCopy } from "../Typography/Typography";
 function PhotoPageImage() {
   const { id } = useParams();
   const [photo, setPhoto] = useState(null);
-  const BASE_URL = "https://unit-3-project-c5faaab51857.herokuapp.com";
-  const API_KEY = "0b7ea1c0-7c37-4087-bfb3-dd00663da892";
-  const url = `${BASE_URL}/photos/${id}?api_key=${API_KEY}`; //fetch individual photo api key
+
 
   useEffect(() => {
     fetchPhoto();
@@ -17,7 +15,7 @@ function PhotoPageImage() {
 
   async function fetchPhoto() {
     try {
-      const { data } = await axios.get(url);
+      const { data } = await axios.get(`${import.meta.env.VITE_BASE_URL}/photos/${id}`);
       setPhoto(data);
     } catch (error) {
       console.log(error);
