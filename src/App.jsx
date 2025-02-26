@@ -4,6 +4,8 @@ import HomePage from "../src/pages/HomePage/HomePage";
 import PhotoPage from "../src/pages/PhotoPage/PhotoPage";
 
 function App() {
+  import.meta.env.VITE_BASE_URL
+  
   return (
     <BrowserRouter>
       <Routes>
