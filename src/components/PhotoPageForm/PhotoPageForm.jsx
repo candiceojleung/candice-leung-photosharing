@@ -19,13 +19,16 @@ function PhotoPageForm({ id, fetchComments }) {
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault();
-    setSubmit(true);
-
-    if (name.trim() === "" || comment.trim() === "") {
-      return; // Prevent form submission if fields are empty, ensuring not to count "spaces"
+    try{
+      event.preventDefault();
+      setSubmit(true);
+      if (name.trim() === "" || comment.trim() === "") {
+        return; // Prevent form submission if fields are empty, ensuring not to count "spaces"
+      }
+      postComment();
+    } catch(error){
+      console.log(error);
     }
-    postComment();
   };
 
   async function postComment() {

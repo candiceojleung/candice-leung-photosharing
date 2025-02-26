@@ -50,7 +50,7 @@ textarea {
     }
 
     &--invalid {
-      border: 2px solid #b10606;
+      border: 2px solid $error-border;
     }
   }
 
