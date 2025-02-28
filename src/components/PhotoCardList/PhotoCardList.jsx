@@ -12,7 +12,9 @@ function PhotoCardList({ selectedFilter, isDrawerOpen }) {
 
   async function fetchPhotos() {
     try {
-      const { data } = await axios.get(`${import.meta.env.VITE_BASE_URL}/photos`);
+      const { data } = await axios.get(
+        `${import.meta.env.VITE_BASE_URL}/photos`
+      );
       setPhotos(data);
     } catch (error) {
       console.log(error);

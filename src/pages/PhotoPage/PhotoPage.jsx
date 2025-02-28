@@ -18,7 +18,9 @@ export default function PhotoPage() {
 
   async function fetchComments() {
     try {
-      const { data } = await axios.get(`${import.meta.env.VITE_BASE_URL}/photos/${id}/comments`);
+      const { data } = await axios.get(
+        `${import.meta.env.VITE_BASE_URL}/photos/${id}/comments`
+      );
       const sortedData = data.sort(
         (a, b) => new Date(b.timestamp) - new Date(a.timestamp) //sort comments based on date posted, showing most recent at top
       );

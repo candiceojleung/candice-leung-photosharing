@@ -6,7 +6,7 @@ import { Heading, Label } from "../Typography/Typography";
 
 function FilterDrawer({ selectedFilter, setSelectedFilter, isDrawerOpen }) {
   const [tags, setTags] = useState(null);
-  
+
   useEffect(() => {
     fetchTags();
   }, []);

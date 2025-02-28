@@ -16,17 +16,19 @@ function PhotoPageForm({ id, fetchComments }) {
   };
 
   const handleSubmit = (event) => {
-    try{
+    try {
       event.preventDefault();
       setSubmit(true);
       if (name.trim() === "" || comment.trim() === "") {
         setTimeout(() => {
-          alert("Name and comment are required and neither can be empty");
+          alert(
+            "Name and comment fields are required and neither can be empty"
+          );
         }, 2);
         return;
       }
       postComment();
-    } catch(error){
+    } catch (error) {
       console.log(error);
     }
   };
@@ -34,7 +36,10 @@ function PhotoPageForm({ id, fetchComments }) {
   async function postComment() {
     try {
       const commentObj = { name: name, comment: comment };
-      const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/photos/${id}/comments`, commentObj);
+      const response = await axios.post(
+        `${import.meta.env.VITE_BASE_URL}/photos/${id}/comments`,
+        commentObj
+      );
       fetchComments(); //fetch comments again with new comment
       setName(""); //reset name field
       setComment(""); //reset comment field

@@ -3,12 +3,11 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { BodyCopy } from "../Typography/Typography";
-import {formatPhotoDate} from "../../utils/dateFormatter"
+import { formatPhotoDate } from "../../utils/dateFormatter";
 
 function PhotoPageImage() {
   const { id } = useParams();
   const [photo, setPhoto] = useState(null);
-
 
   useEffect(() => {
     fetchPhoto();
@@ -16,7 +15,9 @@ function PhotoPageImage() {
 
   async function fetchPhoto() {
     try {
-      const { data } = await axios.get(`${import.meta.env.VITE_BASE_URL}/photos/${id}`);
+      const { data } = await axios.get(
+        `${import.meta.env.VITE_BASE_URL}/photos/${id}`
+      );
       setPhoto(data);
     } catch (error) {
       console.log(error);

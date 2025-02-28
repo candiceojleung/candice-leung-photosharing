@@ -1,7 +1,7 @@
 import "./CommentList.scss";
 import Comment from "../Comment/Comment";
 import { BodyCopy } from "../Typography/Typography";
-import { formatCommentDate } from "../../utils/dateFormatter"
+import { formatCommentDate } from "../../utils/dateFormatter";
 
 function CommentList({ comments }) {
   if (!comments) {
@@ -20,7 +20,7 @@ function CommentList({ comments }) {
         </BodyCopy>
       </div>
       {comments.map((comment) => {
-      const formattedTime = formatCommentDate(comment.timestamp);
+        const formattedTime = formatCommentDate(comment.timestamp);
 
         return (
           <Comment
