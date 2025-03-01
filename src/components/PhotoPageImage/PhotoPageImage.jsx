@@ -3,7 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { BodyCopy } from "../Typography/Typography";
-import { formatPhotoDate } from "../../utils/dateFormatter";
+import { formatDate } from "../../utils/dateFormatter";
 
 function PhotoPageImage() {
   const { id } = useParams();
@@ -28,7 +28,7 @@ function PhotoPageImage() {
     return <div>Loading...</div>;
   }
 
-  const formattedPhotoDate = formatPhotoDate(photo.timestamp);
+  const formattedPhotoDate = formatDate(photo.timestamp);
 
   return (
     <section className="photopage">

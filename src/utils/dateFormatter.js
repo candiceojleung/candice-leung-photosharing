@@ -4,10 +4,6 @@ const dateOptions = {
   day: "2-digit",
 };
 
-export const formatCommentDate = (timestamp) => {
-  return new Date(timestamp).toLocaleDateString("en-US", dateOptions);
-};
-
-export const formatPhotoDate = (timestamp) => {
+export const formatDate = (timestamp) => {
   return new Date(timestamp).toLocaleDateString("en-US", dateOptions);
 };
