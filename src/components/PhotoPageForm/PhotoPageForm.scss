@@ -6,9 +6,17 @@ textarea {
   font-family: "Outfit";
   font-size: 12px;
   font-weight: 500;
+  background-color: $secondary-text;
   @include tablet {
     font-size: 20px;
   }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: inherit;
+  transition: background-color 5000s ease-in-out 0s;
 }
 .form {
   margin-bottom: 24px;
