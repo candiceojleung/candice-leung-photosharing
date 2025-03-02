@@ -24,7 +24,7 @@ function PhotoPageForm({ id, fetchComments }) {
           alert(
             "Name and comment fields are required and neither can be empty"
           );
-        }, 2);
+        }, 5);
         return;
       }
       postComment();
